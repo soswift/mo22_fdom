@@ -1,0 +1,51 @@
+loaded	UniqueID	collection	name	sample	count	notes
+1	BLANK1_run1_NA	BLANK1	BLANK1		NA	
+2	71_run1_1	fdom_apr_2022	71	1	1	rerun
+1	73_run1_2	fdom_apr_2022	73	2	2	rerun
+2	74_run1_3	fdom_apr_2022	74	3	3	rerun
+1	75_run1_4	fdom_apr_2022	75	4	4	rerun
+2	76_run1_5	fdom_apr_2022	76	5	5	rerun
+1	77_run1_6	fdom_apr_2022	77	6	6	rerun
+2	78_run1_7	fdom_apr_2022	78	7	7	rerun
+1	BLANK1_run1_NA	BLANK2	BLANK1		NA	
+2	80_run1_8	fdom_apr_2022	80	1	8	rerun
+1	81_run1_9	fdom_apr_2022	81	2	9	rerun
+2	82_run1_10	fdom_apr_2022	82	3	10	rerun
+1	83_run1_11	fdom_apr_2022	83	4	11	rerun
+2	84_run1_12	fdom_apr_2022	84	5	12	rerun
+1	85_run1_13		85	6	13	no label and rerun
+2	86_run1_14		86	7	14	no label and rerun
+1	BLANK1_run1_NA	BLANK3	BLANK1		NA	
+2	87_run1_15		87	1	15	no label and rerun
+1	89_run1_16	fdom_apr_2022	89	2	16	rerun
+2	90_run1_17	fdom_april_2022	90	3	17	rerun
+1	91_run1_18	fdom_apr_2022	91	4	18	rerun
+2	92_run3_19	fdom_apr	92	5	19	rerun
+1	93_run3_20	fdom_apr_2022	93	6	20	rerun
+2	94_run3_21	fdom_apr_2022	94	7	21	rerun
+1	BLANK1_run3_NA	BLANK4	BLANK1		NA	
+2	95_run3_22	fdom_apr_2022	95	1	22	rerun
+1	96_run3_23	fdom_aprl_2022	96	2	23	rerun
+2	98_run3_24	fdom_apl_2022	98	3	24	rerun
+1	99_run3_25	fdom_apr_2022	99	4	25	rerun
+2	100_run3_26	apl_2022	100	5	26	rerun
+1	101_run3_27	fdom_apr_2022	101	6	27	rerun
+2	102_run3_28	fdom_lag_4_22	102	7	28	rerun not sure if it really says lag
+1	BLANK1_run3_NA	BLANK5	BLANK1		NA	
+2	103_run3_29	fdom_lag_4_22	103	1	29	
+1	104_run3_30	fdom_lag_4_22	104	2	30	
+2	105_run3_31	fdom_lag_4_22	105	3	31	
+1	106_run3_32	fdom_apr_2022	106	4	32	
+2	107_run3_33	fdom_lag_4_22	107	5	33	
+1	108_run3_34	fdom_apr_2022	108	6	34	
+2	109_run3_35	fdom_apr_2022	109	7	35	
+1	BLANK1_run3_NA	BLANK6	BLANK1		NA	did not see
+2	110_run3_36	fdom_apr_2022	110	1	36	
+1	111_run3_37	fdom_apr_2022	111	2	37	
+2	112_run3_38	fdom_apr_2022	112	3	38	
+1	113_run3_39	fdom_apr_2022	113	4	39	
+2	114_run3_40	fdom_apr_2022	114	5	40	
+1	115_run3_41	fdom_apr_2022	115	6	41	
+2	116_run3_42	fdom_apr_2022	116	7	42	
+1	BLANK1_run3_NA	BLANK7	BLANK1		NA	
+2	123_run3_43	fdom_lag_4_22	123	1	43	

@@ -1,0 +1,19 @@
+loaded	UniqueID	collection	name	sample	count	notes
+1	BLANK1_run1_NA	BLANK1	BLANK1		NA	
+2	1_run1_1	fdom_apr_2022	1	1	1	rerun
+1	2_run1_2	fdom_apr_22	2	2	2	rerun
+2	3_run1_3	fdom_apr_2022	3	3	3	rerun
+1	1_run1_4	fdom_apr_2022	1	4	4	rererun to ease concern about contamination from RH
+2	4_run1_5	fdom_apr_22	4	5	5	rerun
+1	5_run1_6	fdom_apr_22	5	6	6	rerun
+2	6_run1_7	fdom_apr_2022	6	7	7	rerun
+	BLANK2_run1_NA	BLANK2	BLANK2		NA	weird blank maybe towel fluff
+	milliq_run1_8	milliq	milliq	1	8	blank samples
+	milliq_run1_9	milliq	milliq	2	9	
+	milliq_run1_10	milliq	milliq	3	10	
+	milliq_run1_11	milliq	milliq	4	11	
+	milliq_run1_12	milliq	milliq	5	12	
+	milliq_run1_13	milliq	milliq	6	13	
+	milliq_run1_14	milliq	milliq	7	14	
+1	BLANK3_run1_NA	BLANK3	BLANK3		NA	good blank
+2	7_run1_15	fdom_apr_2022	7	1	15	rerun

@@ -1,0 +1,27 @@
+loaded	UniqueID	collection	name	sample	count	notes
+1	BLANK1_run4_NA	BLANK1	BLANK1		NA	
+2	126_run4_1	fdom_lag_4_22	126	1	1	
+1	126_run4_2	new_fdom	126	2	2	
+2	127_run4_3	fdom_lag_4_22	127	3	3	
+1	128_run4_4	fdom_lag_4_22	128	4	4	
+2	132_run4_5		132	5	5	no label just number
+1	134_run4_6	fdom_lag_4_22	134	6	6	
+2	136_run4_7	fdom_lag_4_22	136	7	7	label says 135
+1	BLANK1_run4_NA	BLANK2	BLANK1		NA	blob in the 500 range
+2	138_run4_8	fdom_lag_4_22	138	1	8	
+1	139_run4_9	fdom_apr_2022	139	2	9	
+2	140_run4_10	fdom_apr_2022	140	3	10	
+1	142_run4_11	fdom_lagoon_4_2022	142	4	11	
+2	143_run4_12	fdom_lagoon_4_2022	143	5	12	
+1	144_run4_13	fdom_april_2022	144	6	13	
+2	145_run4_14	fdom_apr_2022	145	7	14	
+1	BLANK1_run4_NA	BLANK3	BLANK1		NA	
+2	145_run4_15	fdom_apri_2022	145	1	15	
+1	146_run4_16	fdom_apr_2022	146	2	16	
+2	155_run4_17	fdom_apr_2022	155	3	17	
+1	156_run4_18	fdom_apr_2022	156	4	18	
+2	158_run4_19	fdom	158	5	19	
+1	159_run4_20	fdom_lagoon_4_2022	159	6	20	
+2	160_run4_21	fdom_apr_2022	160	7	21	
+	BLANK1_run4_NA	BLANK4	BLANK1		NA	bad blank small blobs 350 to 400
+	161_run4_22	fdom_lagoon_4_2022	161	1	22	label says 186 have to re run tho

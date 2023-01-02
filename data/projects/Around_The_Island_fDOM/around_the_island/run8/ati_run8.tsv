@@ -1,0 +1,27 @@
+loaded	UniqueID	collection	name	sample	count	notes
+1	BLANK1_run8_NA	BLANK1	BLANK1		NA	
+2	118_run8_1	fdom_lag_4_22	118	1	1	rerun
+1	119_run8_2	fdom_apr_2022	119	2	2	rerun
+2	120_run8_3	fdom_apr_2022	120	3	3	rerun
+1	121_run8_4	fdom_4_22	121	4	4	rerun
+2	130_run8_5	fdom_4_22	130	5	5	rerun
+1	131_run8_6	fdom_apr_2022	131	6	6	rerun
+2	133_run8_7	fdom_apr_2022	133	7	7	rerun
+1	BLANK2_run8_NA	BLANK2	BLANK2		NA	
+2	135_run8_8	fdom_apr_2022	135	1	8	
+1	137_run8_9	fdom_lag_4_22	137	2	9	
+2	144_run8_10	fdom_apr_2022	144	3	10	
+1	147_run8_11	fdom_apr_2022	147	4	11	
+2	148_run8_12	fdom_apr_2022	148	5	12	
+1	149_run8_13	fdom_apr_2022	149	6	13	
+2	150_run8_14	fdom_april_2022	150	7	14	
+1	BLANK3_run8_NA	BLANK3	BLANK3		NA	bad blank will likely need to rerun the set
+2	151_run8_15	fdom_apr_22	151	1	15	
+1	152_run8_16	fdom_04_22	152	2	16	
+2	153_run8_17	fdom_april_2022	153	3	17	
+1	154_run8_18	fdom_april_2022	154	4	18	
+2	157_run8_19	fdom_april_2022	157	5	19	
+1	201_run8_20	fdom_april_2022	201	6	20	
+2	205_run8_21	fdom_4_22	205	7	21	1/4 spill
+1	BLANK4_run8_NA	BLANK4	BLANK4		NA	big blob
+2	206_run8_22	fdom_april_2022	206	1	22	

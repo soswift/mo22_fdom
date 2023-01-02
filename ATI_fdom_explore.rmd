@@ -1,0 +1,233 @@
+---
+title: "ATI fDOM explore"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    smooth_scroll: true 
+    fig_width: 10
+    code_folding: hide  
+date: '2022-12-05'
+---
+# Overview
+
+This rmarkdown is a first pass looking at data from all of the ATI 2022 fDOM (as processed by Sean's Rscript translation of the original matlab script).
+
+These samples were run by Skye Inn on a Horiba Aqualog and were split over several runs.
+
+A couple things to consider:
+
+- We suspect contaminant fluorescence in the region of PAHs/CobleT because of recent experiments with JP5 fuel.  
+
+- Some samples were re-run across runs.
+    - Check if these look the same across runs.
+    - Remove the rerun sample if nothing looks amiss
+    
+- Some milliq blanks were run as a form of extra QC.
+    - Check these for unusual fluoresecence.
+    - Remove from data set containing only real samples.
+
+
+  
+```{r env-setup}
+source("R/src/eem_plot_functions.R")
+source("R/src/process_aqualog_functions.R")
+library(GGally)
+library(oce)
+
+# set ggplot params
+theme_set(theme_minimal())
+options(ggplot2.discrete.colour = c(
+  '#636EFA',
+  '#EF553B',
+  '#00CC96',
+  '#AB63FA',
+  '#FFA15A',
+  '#19D3F3',
+  '#FF6692',
+  '#B6E880',
+  '#FF97FF',
+  '#FECB52')
+  )
+
+# identify indices
+
+all_indices = c(
+  'CobleA',
+  'CobleB',
+  'CobleC',
+  'CobleM',
+  'CobleT',
+  'Fpeak',
+  'Stedmon_D',
+  'Optical_Brighteners',
+  'dieselBandII',
+  'Petroleum',
+  'Lignin',
+  'BIX',
+  'HIX',
+  'FI',
+  'M_to_C',
+  'JP5_empirical'
+)
+
+ord_indices =c(
+  'CobleA',
+  'CobleB',
+  'CobleT',
+  'Lignin'
+)
+
+```
+
+
+```{r read-in}
+all_runs = readRDS("data/compiled/all_runs.rds")
+
+sam_sheets = fread("data/compiled/all_sample_sheets.csv", drop = "run_name")
+index_data = fread("data/compiled/all_sample_indices.csv")
+site_data = fread("data/sample_data/islandwide_sites_allMetadata.csv")
+
+
+
+proj = c(
+    cabral = "SGD",
+    varari = "SGD",
+    RRCoral_1 = "RRCoral",
+    RRCoral_2 = "RRCoral",
+    spiffy = "Spiffy",
+    spiffy_lang = "SpiffyLang",
+    diel_run1 = "diel",
+    diel_run2 = "diel",
+    aroundtheisland_run1 = "ati",
+    aroundtheisland_run2 = "ati",
+    aroundtheisland_run3 = "ati",
+    aroundtheisland_run4 = "ati",
+    aroundtheisland_run5 = "ati",
+    aroundtheisland_run6 = "ati",
+    aroundtheisland_run7 = "ati",
+    aroundtheisland_run8 = "ati"
+)
+
+# subset to ATI
+index_data[ , project := proj[run_name]]
+
+index_data = index_data[project == "ati"]
+
+
+# merge with relevant data
+all_dat = merge(index_data,
+                sam_sheets,
+                all.x = T,
+                all.y = F,
+                by = "UniqueID")
+all_dat[ , Site:= gsub("_.*","",UniqueID)]
+
+
+# pull out ancillary samples
+
+opu = all_dat[Site == "opu"]
+lter = all_dat[Site == "lter"]
+milliq = all_dat[Site=="milliq"]
+
+dat = all_dat[!(Site %in% c("opu","lter","milliq"))] 
+
+# make long data for ggplot
+long_dat = melt.data.table(dat,
+                            id.vars = c("UniqueID", "Site"),
+                            measure.vars = all_indices,
+                            variable.name = "index_name",
+                            value.name = "index_value")
+
+
+# pull out duplicates
+
+dupd_samples = dat$Site[duplicated(dat$Site)]
+
+dupd_dat = dat[Site %in% dupd_samples]
+long_dupd_dat = long_dat[ Site %in% dupd_samples]
+
+
+```
+  
+
+
+## Check re-run samples
+
+Some samples were re-run to check for consistency (i.e. contaminant signal, run effects).
+
+```{r check-samples}
+# check counts
+dupd_dat[ , .("N samples" = .N,
+              "Runs" = paste(run_name, collapse = ",")), by = "Site"]
+
+# plot indices for each pair
+
+p_check_list = list()
+
+for( i in dupd_samples){
+ 
+   p_check_list[[i]] = ggplot(long_dupd_dat[Site == i],
+                              aes(x = index_name,
+                                  y = index_value,
+                                  color = UniqueID))+
+                        geom_point(size = 4, alpha = 0.5)+
+                        theme(axis.text.x = element_text(angle = 90))
+
+  
+   ggsave(plot = p_check_list[[i]],
+          filename = paste0("plots/exploration/ATI/Site_",i,"_rerun_check.pdf"),
+          width = 10, height = 8)
+}
+
+
+
+
+```
+
+
+## Check Miliq blanks
+
+```{r}
+long_milliq = long_dat[Site == "milliq"]
+
+
+```
+
+## Remove extraneous reruns and blanks
+
+```{r}
+
+
+
+```
+
+
+
+# Site Data
+
+Check for trends by:
+
+1. Habitat
+2. shore direction
+3. Lagoon name
+4. Lat/Lon
+
+
+```{r}
+
+meta = fread("data/sample_data/islandwide_sites_allMetadata.csv")
+
+meta[ , .N, by = .(Habitat)]
+
+meta[ , .N, by = .(Island_shore)]
+
+meta[ , .N, by = .(Lagoon)]
+
+
+```
+
+  
+  
+  

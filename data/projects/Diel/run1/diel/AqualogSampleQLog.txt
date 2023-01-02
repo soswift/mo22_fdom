@@ -1,0 +1,83 @@
+########################################################################
+Log File: C:\Users\Craig Nelson\Desktop\Swift\diel\AqualogSampleQLog.txt
+Date: Friday, August 26, 2022
+Time: 11:58:52 AM
+########################################################################
+[2022-08-26 11-58-52] 
+Aqualog Sample Q Experimental Parameters:
+[Aqualog Sample Q File] C:\Users\Craig Nelson\Desktop\Swift\diel\AqualogSampleQ.aqu
+[Aqualog Experiment File] C:\Users\Craig Nelson\Desktop\Swift\AqualogSampleQ.xml
+[Output Destination Folder] C:\Users\Craig Nelson\Desktop\Swift\diel\
+
+Output File Names:
+[Blank Group Prefix] Group
+[Blank File Base] Blank
+[Sample Prefix] Sample
+
+Blank & Sample Setup:
+[Blank Group Count] 6
+[Blank Group Start] 1
+[Samples Per Blank] 7
+[Blank Group Start] 1
+[Total Number of Blanks & Samples] 48
+
+Post Prossessing Options:
+
+Export Options:
+ASCII = True
+ABS = True
+BEM = True
+SEM = True
+
+Delay Options:
+Single Cell Kinetics = False
+Delay Before First Blank = 0 Seconds
+Delay Between Each Experiment = 0 Seconds
+
+Starting (Run/Resume) Position:
+[Blank Start Index] 0
+[Sample Start Index] 0
+################################################################################
+[2022-08-26 11-58-52] STARTING Aqualog SampleQ Execution
+[2022-08-26 12-05-20] Experiment 01 of 48 [Blank 000, Sample 0000] [Files: Group001Blank*] Start Done
+[2022-08-26 12-09-21] Experiment 02 of 48 [Blank 000, Sample 0001] [Files: Group001Sample0001*] Start Done
+[2022-08-26 12-16-29] Experiment 03 of 48 [Blank 000, Sample 0002] [Files: Group001Sample0002*] Start Done
+[2022-08-26 12-20-36] Experiment 04 of 48 [Blank 000, Sample 0003] [Files: Group001Sample0003*] Start Done
+[2022-08-26 12-27-10] Experiment 05 of 48 [Blank 000, Sample 0004] [Files: Group001Sample0004*] Start Done
+[2022-08-26 12-31-17] Experiment 06 of 48 [Blank 000, Sample 0005] [Files: Group001Sample0005*] Start Done
+[2022-08-26 12-38-50] Experiment 07 of 48 [Blank 000, Sample 0006] [Files: Group001Sample0006*] Start Done
+[2022-08-26 12-42-57] Experiment 08 of 48 [Blank 000, Sample 0007] [Files: Group001Sample0007*] Start Done
+[2022-08-26 12-49-24] Experiment 09 of 48 [Blank 001, Sample 0000] [Files: Group002Blank*] Start Done
+[2022-08-26 12-53-24] Experiment 10 of 48 [Blank 001, Sample 0001] [Files: Group002Sample0001*] Start Done
+[2022-08-26 13-02-44] Experiment 11 of 48 [Blank 001, Sample 0002] [Files: Group002Sample0002*] Start Done
+[2022-08-26 13-06-50] Experiment 12 of 48 [Blank 001, Sample 0003] [Files: Group002Sample0003*] Start Done
+[2022-08-26 13-14-57] Experiment 13 of 48 [Blank 001, Sample 0004] [Files: Group002Sample0004*] Start Done
+[2022-08-26 13-19-03] Experiment 14 of 48 [Blank 001, Sample 0005] [Files: Group002Sample0005*] Start Done
+[2022-08-26 13-25-08] Experiment 15 of 48 [Blank 001, Sample 0006] [Files: Group002Sample0006*] Start Done
+[2022-08-26 13-29-15] Experiment 16 of 48 [Blank 001, Sample 0007] [Files: Group002Sample0007*] Start Done
+[2022-08-26 13-35-14] Experiment 17 of 48 [Blank 002, Sample 0000] [Files: Group003Blank*] Start Done
+[2022-08-26 13-39-14] Experiment 18 of 48 [Blank 002, Sample 0001] [Files: Group003Sample0001*] Start Done
+[2022-08-26 13-51-43] Experiment 19 of 48 [Blank 002, Sample 0002] [Files: Group003Sample0002*] Start Done
+[2022-08-26 13-55-49] Experiment 20 of 48 [Blank 002, Sample 0003] [Files: Group003Sample0003*] Start Done
+[2022-08-26 14-03-42] Experiment 21 of 48 [Blank 002, Sample 0004] [Files: Group003Sample0004*] Start Done
+[2022-08-26 14-07-49] Experiment 22 of 48 [Blank 002, Sample 0005] [Files: Group003Sample0005*] Start Done
+[2022-08-26 14-15-56] Experiment 23 of 48 [Blank 002, Sample 0006] [Files: Group003Sample0006*] Start
+[2022-08-26 14-20-02] ##### WARNING: CCD SATURATION OCCURRED ##### Done
+[2022-08-26 14-20-02] Experiment 24 of 48 [Blank 002, Sample 0007] [Files: Group003Sample0007*] Start Done
+[2022-08-26 14-27-03] Experiment 25 of 48 [Blank 003, Sample 0000] [Files: Group004Blank*] Start Done
+[2022-08-26 14-31-04] Experiment 26 of 48 [Blank 003, Sample 0001] [Files: Group004Sample0001*] Start Done
+[2022-08-26 14-36-43] Experiment 27 of 48 [Blank 003, Sample 0002] [Files: Group004Sample0002*] Start Done
+[2022-08-26 14-40-49] Experiment 28 of 48 [Blank 003, Sample 0003] [Files: Group004Sample0003*] Start Done
+[2022-08-26 14-47-05] Experiment 29 of 48 [Blank 003, Sample 0004] [Files: Group004Sample0004*] Start Done
+[2022-08-26 14-51-11] Experiment 30 of 48 [Blank 003, Sample 0005] [Files: Group004Sample0005*] Start Done
+[2022-08-26 14-57-15] Experiment 31 of 48 [Blank 003, Sample 0006] [Files: Group004Sample0006*] Start Done
+[2022-08-26 15-01-22] Experiment 32 of 48 [Blank 003, Sample 0007] [Files: Group004Sample0007*] Start Done
+[2022-08-26 15-07-32] Experiment 33 of 48 [Blank 004, Sample 0000] [Files: Group005Blank*] Start Done
+[2022-08-26 15-11-32] Experiment 34 of 48 [Blank 004, Sample 0001] [Files: Group005Sample0001*] Start Done
+[2022-08-26 15-19-34] Experiment 35 of 48 [Blank 004, Sample 0002] [Files: Group005Sample0002*] Start Done
+[2022-08-26 15-23-41] Experiment 36 of 48 [Blank 004, Sample 0003] [Files: Group005Sample0003*] Start Done
+[2022-08-26 15-29-15] Experiment 37 of 48 [Blank 004, Sample 0004] [Files: Group005Sample0004*] Start Done
+[2022-08-26 15-33-21] Experiment 38 of 48 [Blank 004, Sample 0005] [Files: Group005Sample0005*] Start Done
+[2022-08-26 15-39-05] Experiment 39 of 48 [Blank 004, Sample 0006] [Files: Group005Sample0006*] Start Done
+[2022-08-26 15-43-11] Experiment 40 of 48 [Blank 004, Sample 0007] [Files: Group005Sample0007*] Start Done
+[2022-08-26 15-48-00] USER CANCELED Aqualog SampleQ Execution

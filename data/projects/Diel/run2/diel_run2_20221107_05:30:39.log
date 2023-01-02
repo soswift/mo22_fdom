@@ -1,0 +1,99 @@
+Reading data files in directory: Diel/run2/
+Reading in sample key
+ [1] "Reading data files in directory: Diel/run2/"                                   
+ [2] "Reading in sample key"                                                         
+ [3] "Blanks detected in sample key = 6"                                             
+ [4] "Total N samples = 40"                                                          
+ [5] "Total N groups = 6"                                                            
+ [6] "Total N blanks  = 6"                                                           
+ [7] "N samples in each group = 7"                                                   
+ [8] "N samples in last group = 5"                                                   
+ [9] "Absorbance files detected, including absorbance data and IFE correction"       
+[10] "writing out sample_sheet as: diel_run2_sample_sheet.csv"                       
+[11] "extracting EEM data from files"                                                
+[12] "[1] \"Good. All SEM files exist.\""                                            
+[13] "Absorbance (ABS) files detected, reading absorbance data"                      
+[14] "calculating Raman Areas"                                                       
+[15] "performing Inner Filter Correction"                                            
+[16] "performing Raman scaling"                                                      
+[17] "performing Rayleigh scatter subtraction"                                       
+[18] "writing out cleaned EEM files to directory processed_data > processed_matrices"
+[19] "calculating indices"                                                           
+[20] "index calculated:  CobleA"                                                     
+[21] "index calculated:  CobleB"                                                     
+[22] "index calculated:  CobleC"                                                     
+[23] "index calculated:  CobleM"                                                     
+[24] "index calculated:  CobleT"                                                     
+[25] "index calculated:  Fpeak"                                                      
+[26] "index calculated:  Stedmon_D"                                                  
+[27] "index calculated:  Optical_Brighteners"                                        
+[28] "index calculated:  dieselBandII"                                               
+[29] "index calculated:  Petroleum"                                                  
+[30] "index calculated:  Lignin"                                                     
+[31] "index calculated:  BIX"                                                        
+[32] "index calculated:  HIX"                                                        
+[33] "index calculated:  FI"                                                         
+[34] "index calculated:  M_to_C"                                                     
+[35] "index calculated:  JP5_empirical"                                              
+[36] "index calculated:  JP5_normalized"                                             
+[37] "index calculated:  Diesel_Chen"                                                
+[38] "writing out indices to processed_data > fDOM_indices_out.csv"                  
+[39] "DONE: indices written out to diel_run2_fDOM_indices_out.csv"                   
+    UniqueID  run_name run_order             sample    group                  SEM_file                    blank1
+1  Mo22_0750 RRCoral_1         1 Group001Sample0001 Group001 Group001Sample0001SEM.dat Group001Sample0001BEM.dat
+2  Mo22_0751 RRCoral_1         2 Group001Sample0002 Group001 Group001Sample0002SEM.dat Group001Sample0001BEM.dat
+3  Mo22_0752 RRCoral_1         3 Group001Sample0003 Group001 Group001Sample0003SEM.dat Group001Sample0001BEM.dat
+4  Mo22_0753 RRCoral_1         4 Group001Sample0004 Group001 Group001Sample0004SEM.dat Group001Sample0001BEM.dat
+5  Mo22_0754 RRCoral_1         5 Group001Sample0005 Group001 Group001Sample0005SEM.dat Group001Sample0001BEM.dat
+6  Mo22_0755 RRCoral_1         6 Group001Sample0006 Group001 Group001Sample0006SEM.dat Group001Sample0001BEM.dat
+7  Mo22_0756 RRCoral_1         7 Group001Sample0007 Group001 Group001Sample0007SEM.dat Group001Sample0001BEM.dat
+8  Mo22_0757 RRCoral_1         8 Group002Sample0001 Group002 Group002Sample0001SEM.dat Group002Sample0001BEM.dat
+9  Mo22_0758 RRCoral_1         9 Group002Sample0002 Group002 Group002Sample0002SEM.dat Group002Sample0001BEM.dat
+10 Mo22_0759 RRCoral_1        10 Group002Sample0003 Group002 Group002Sample0003SEM.dat Group002Sample0001BEM.dat
+11 Mo22_0760 RRCoral_1        11 Group002Sample0004 Group002 Group002Sample0004SEM.dat Group002Sample0001BEM.dat
+12 Mo22_0761 RRCoral_1        12 Group002Sample0005 Group002 Group002Sample0005SEM.dat Group002Sample0001BEM.dat
+13 Mo22_0762 RRCoral_1        13 Group002Sample0006 Group002 Group002Sample0006SEM.dat Group002Sample0001BEM.dat
+14 Mo22_0763 RRCoral_1        14 Group002Sample0007 Group002 Group002Sample0007SEM.dat Group002Sample0001BEM.dat
+15 Mo22_0764 RRCoral_1        15 Group003Sample0001 Group003 Group003Sample0001SEM.dat Group003Sample0001BEM.dat
+16 Mo22_0765 RRCoral_1        16 Group003Sample0002 Group003 Group003Sample0002SEM.dat Group003Sample0001BEM.dat
+17 Mo22_0766 RRCoral_1        17 Group003Sample0003 Group003 Group003Sample0003SEM.dat Group003Sample0001BEM.dat
+18 Mo22_0767 RRCoral_1        18 Group003Sample0004 Group003 Group003Sample0004SEM.dat Group003Sample0001BEM.dat
+19 Mo22_0768 RRCoral_1        19 Group003Sample0005 Group003 Group003Sample0005SEM.dat Group003Sample0001BEM.dat
+20 Mo22_0769 RRCoral_1        20 Group003Sample0006 Group003 Group003Sample0006SEM.dat Group003Sample0001BEM.dat
+21 Mo22_0770 RRCoral_1        21 Group003Sample0007 Group003 Group003Sample0007SEM.dat Group003Sample0001BEM.dat
+22 Mo22_0771 RRCoral_1        22 Group004Sample0001 Group004 Group004Sample0001SEM.dat Group004Sample0001BEM.dat
+23 Mo22_0772 RRCoral_1        23 Group004Sample0002 Group004 Group004Sample0002SEM.dat Group004Sample0001BEM.dat
+24 Mo22_0773 RRCoral_1        24 Group004Sample0003 Group004 Group004Sample0003SEM.dat Group004Sample0001BEM.dat
+25 Mo22_0774 RRCoral_1        25 Group004Sample0004 Group004 Group004Sample0004SEM.dat Group004Sample0001BEM.dat
+26 Mo22_0775 RRCoral_1        26 Group004Sample0005 Group004 Group004Sample0005SEM.dat Group004Sample0001BEM.dat
+27 Mo22_0776 RRCoral_1        27 Group004Sample0006 Group004 Group004Sample0006SEM.dat Group004Sample0001BEM.dat
+28 Mo22_0777 RRCoral_1        28 Group004Sample0007 Group004 Group004Sample0007SEM.dat Group004Sample0001BEM.dat
+                      blank2                  ABS_file
+1  Group002Sample0001BEM.dat Group001Sample0001ABS.dat
+2  Group002Sample0001BEM.dat Group001Sample0002ABS.dat
+3  Group002Sample0001BEM.dat Group001Sample0003ABS.dat
+4  Group002Sample0001BEM.dat Group001Sample0004ABS.dat
+5  Group002Sample0001BEM.dat Group001Sample0005ABS.dat
+6  Group002Sample0001BEM.dat Group001Sample0006ABS.dat
+7  Group002Sample0001BEM.dat Group001Sample0007ABS.dat
+8  Group003Sample0001BEM.dat Group002Sample0001ABS.dat
+9  Group003Sample0001BEM.dat Group002Sample0002ABS.dat
+10 Group003Sample0001BEM.dat Group002Sample0003ABS.dat
+11 Group003Sample0001BEM.dat Group002Sample0004ABS.dat
+12 Group003Sample0001BEM.dat Group002Sample0005ABS.dat
+13 Group003Sample0001BEM.dat Group002Sample0006ABS.dat
+14 Group003Sample0001BEM.dat Group002Sample0007ABS.dat
+15 Group004Sample0001BEM.dat Group003Sample0001ABS.dat
+16 Group004Sample0001BEM.dat Group003Sample0002ABS.dat
+17 Group004Sample0001BEM.dat Group003Sample0003ABS.dat
+18 Group004Sample0001BEM.dat Group003Sample0004ABS.dat
+19 Group004Sample0001BEM.dat Group003Sample0005ABS.dat
+20 Group004Sample0001BEM.dat Group003Sample0006ABS.dat
+21 Group004Sample0001BEM.dat Group003Sample0007ABS.dat
+22 Group001Sample0001BEM.dat Group004Sample0001ABS.dat
+23 Group001Sample0001BEM.dat Group004Sample0002ABS.dat
+24 Group001Sample0001BEM.dat Group004Sample0003ABS.dat
+25 Group001Sample0001BEM.dat Group004Sample0004ABS.dat
+26 Group001Sample0001BEM.dat Group004Sample0005ABS.dat
+27 Group001Sample0001BEM.dat Group004Sample0006ABS.dat
+28 Group001Sample0001BEM.dat Group004Sample0007ABS.dat

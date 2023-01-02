@@ -1,0 +1,43 @@
+loaded	UniqueID	collection	name	sample	count	notes
+1	BLANK1_run6_NA	BLANK1	BLANK1		NA	
+2	12_run6_1	fdom_april_2022	12	1	1	slight spill
+1	16_run6_2	fdom_april_2022	16	2	2	slight spill
+2	17_run6_3	fdom_april_2022	17	3	3	
+1	19_run6_4	fdom_april_2022	19	4	4	
+2	20_run6_5	fdom_april_2022	20	5	5	
+1	21_run6_6	fdom_april_2022	21	6	6	
+2	22_run6_7	fdom_april_2022	22	7	7	slight spill
+1	BLANK1_run6_NA	BLANK2	BLANK1		NA	
+2	24_run6_8	fdom_april_2022	24	1	8	slight spill
+1	26_run6_9	fdom_april_2022	26	2	9	
+2	27_run6_10	fdom_april_2022	27	3	10	1/4 spill
+1	28_run6_11	fdom_april_2022	28	4	11	
+2	29_run6_12	fdom_april_2022	29	5	12	
+1	32_run6_13	fdom_april_2022	32	6	13	
+2	33_run6_14	fdom_april_2022	33	7	14	
+1	BLANK1_run6_NA	BLANK3	BLANK1		NA	
+2	34_run6_15	fdom_april_2022	34	1	15	
+1	35_run6_16	fdom_april_2022	35	2	16	1/5 spill
+2	36_run6_17	fdom_april_2022	36	3	17	1/3 spill
+1	37_run6_18	fdom_april_2022	37	4	18	
+2	38_run6_19	fdom_april_2022	38	5	19	4/5 spill
+1	39_run6_20	fdom_april_2022	39	6	20	slight spill
+2	40_run6_21	fdom_april_2022	40	7	21	
+1	BLANK1_run6_NA	BLANK4	BLANK1		NA	blobby
+2	41_run6_22	fdom_april_2022	41	1	22	need to re run
+1	milliq_run6_23	milliq1	milliq	2	23	
+2	milliq_run6_24	milliq2	milliq	3	24	
+1	milliq_run6_25	milliq1	milliq	4	25	
+2	milliq_run6_26	milliq2	milliq	5	26	
+1	milliq_run6_27	milliq1	milliq	6	27	
+2	milliq_run6_28	milliq2	milliq	7	28	
+1	BLANK1_run6_NA	BLANK5	BLANK1		NA	
+2	41_run6_29	fdom_april_2022	41	1	29	re run
+1	42_run6_30	fdom_april_2022	42	2	30	
+2	43_run6_31	fdom_4_22	43	3	31	
+1	44_run6_32	fdom_4_22	44	4	32	
+2	45_run6_33	fdom_4_22	45	5	33	1/2 spilled
+1	46_run6_34	fdom_4_22	46	6	34	
+2	48_run6_35	fdom_april_2022	48	7	35	
+1	BLANK1_run6_NA	BLANK6	BLANK1		NA	blobs
+2	51_run6_36	fdom_4_22	51	1	36	re run

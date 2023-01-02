@@ -1,0 +1,112 @@
+############################################################################
+Log File: C:\Users\Craig Nelson\Desktop\Swift\ati\run2\AqualogSampleQLog.txt
+Date: Monday, October 31, 2022
+Time: 2:23:07 PM
+############################################################################
+[2022-10-31 14-23-07] 
+Aqualog Sample Q Experimental Parameters:
+[Aqualog Sample Q File] C:\Users\Craig Nelson\Desktop\Swift\ati\run2\AqualogSampleQ.aqu
+[Aqualog Experiment File] C:\Users\Craig Nelson\Desktop\Swift\AqualogSampleQ.xml
+[Output Destination Folder] C:\Users\Craig Nelson\Desktop\Swift\ati\run2\
+
+Output File Names:
+[Blank Group Prefix] Group
+[Blank File Base] Blank
+[Sample Prefix] Sample
+
+Blank & Sample Setup:
+[Blank Group Count] 6
+[Blank Group Start] 1
+[Samples Per Blank] 7
+[Blank Group Start] 1
+[Total Number of Blanks & Samples] 48
+
+Post Prossessing Options:
+
+Export Options:
+ASCII = True
+ABS = True
+BEM = True
+SEM = True
+
+Delay Options:
+Single Cell Kinetics = False
+Delay Before First Blank = 0 Seconds
+Delay Between Each Experiment = 0 Seconds
+
+Starting (Run/Resume) Position:
+[Blank Start Index] 0
+[Sample Start Index] 0
+################################################################################
+[2022-10-31 14-23-07] STARTING Aqualog SampleQ Execution
+[2022-10-31 14-26-52] Experiment 01 of 48 [Blank 000, Sample 0000] [Files: Group001Blank*] Start
+[2022-10-31 14-30-25] ##### ABORT OCCURRED #####
+
+############################################################################
+Log File: C:\Users\Craig Nelson\Desktop\Swift\ati\run2\AqualogSampleQLog.txt
+Date: Monday, October 31, 2022
+Time: 2:31:10 PM
+############################################################################
+[2022-10-31 14-31-10] 
+Aqualog Sample Q Experimental Parameters:
+[Aqualog Sample Q File] C:\Users\Craig Nelson\Desktop\Swift\ati\run2\AqualogSampleQ.aqu
+[Aqualog Experiment File] C:\Users\Craig Nelson\Desktop\Swift\AqualogSampleQ.xml
+[Output Destination Folder] C:\Users\Craig Nelson\Desktop\Swift\ati\run2\
+
+Output File Names:
+[Blank Group Prefix] Group
+[Blank File Base] Blank
+[Sample Prefix] Sample
+
+Blank & Sample Setup:
+[Blank Group Count] 6
+[Blank Group Start] 1
+[Samples Per Blank] 7
+[Blank Group Start] 1
+[Total Number of Blanks & Samples] 48
+
+Post Prossessing Options:
+
+Export Options:
+ASCII = True
+ABS = True
+BEM = True
+SEM = True
+
+Delay Options:
+Single Cell Kinetics = False
+Delay Before First Blank = 0 Seconds
+Delay Between Each Experiment = 0 Seconds
+
+Starting (Run/Resume) Position:
+[Blank Start Index] 0
+[Sample Start Index] 0
+################################################################################
+[2022-10-31 14-31-10] STARTING Aqualog SampleQ Execution
+[2022-10-31 14-31-11] Experiment 01 of 48 [Blank 000, Sample 0000] [Files: Group001Blank*] Start Done
+[2022-10-31 14-35-10] Experiment 02 of 48 [Blank 000, Sample 0001] [Files: Group001Sample0001*] Start Done
+[2022-10-31 14-41-17] Experiment 03 of 48 [Blank 000, Sample 0002] [Files: Group001Sample0002*] Start Done
+[2022-10-31 14-45-25] Experiment 04 of 48 [Blank 000, Sample 0003] [Files: Group001Sample0003*] Start Done
+[2022-10-31 14-51-03] Experiment 05 of 48 [Blank 000, Sample 0004] [Files: Group001Sample0004*] Start Done
+[2022-10-31 14-55-12] Experiment 06 of 48 [Blank 000, Sample 0005] [Files: Group001Sample0005*] Start Done
+[2022-10-31 15-00-49] Experiment 07 of 48 [Blank 000, Sample 0006] [Files: Group001Sample0006*] Start Done
+[2022-10-31 15-04-52] Experiment 08 of 48 [Blank 000, Sample 0007] [Files: Group001Sample0007*] Start Done
+[2022-10-31 15-10-52] Experiment 09 of 48 [Blank 001, Sample 0000] [Files: Group002Blank*] Start Done
+[2022-10-31 15-14-53] Experiment 10 of 48 [Blank 001, Sample 0001] [Files: Group002Sample0001*] Start Done
+[2022-10-31 15-20-21] Experiment 11 of 48 [Blank 001, Sample 0002] [Files: Group002Sample0002*] Start Done
+[2022-10-31 15-24-24] Experiment 12 of 48 [Blank 001, Sample 0003] [Files: Group002Sample0003*] Start Done
+[2022-10-31 15-29-46] Experiment 13 of 48 [Blank 001, Sample 0004] [Files: Group002Sample0004*] Start Done
+[2022-10-31 15-33-55] Experiment 14 of 48 [Blank 001, Sample 0005] [Files: Group002Sample0005*] Start Done
+[2022-10-31 15-39-24] Experiment 15 of 48 [Blank 001, Sample 0006] [Files: Group002Sample0006*] Start Done
+[2022-10-31 15-43-33] Experiment 16 of 48 [Blank 001, Sample 0007] [Files: Group002Sample0007*] Start Done
+[2022-10-31 15-49-19] Experiment 17 of 48 [Blank 002, Sample 0000] [Files: Group003Blank*] Start Done
+[2022-10-31 15-53-19] Experiment 18 of 48 [Blank 002, Sample 0001] [Files: Group003Sample0001*] Start Done
+[2022-10-31 15-58-00] Experiment 19 of 48 [Blank 002, Sample 0002] [Files: Group003Sample0002*] Start Done
+[2022-10-31 16-02-03] Experiment 20 of 48 [Blank 002, Sample 0003] [Files: Group003Sample0003*] Start Done
+[2022-10-31 16-06-42] Experiment 21 of 48 [Blank 002, Sample 0004] [Files: Group003Sample0004*] Start Done
+[2022-10-31 16-10-45] Experiment 22 of 48 [Blank 002, Sample 0005] [Files: Group003Sample0005*] Start Done
+[2022-10-31 16-14-52] Experiment 23 of 48 [Blank 002, Sample 0006] [Files: Group003Sample0006*] Start Done
+[2022-10-31 16-18-54] Experiment 24 of 48 [Blank 002, Sample 0007] [Files: Group003Sample0007*] Start Done
+[2022-10-31 16-24-27] Experiment 25 of 48 [Blank 003, Sample 0000] [Files: Group004Blank*] Start Done
+[2022-10-31 16-28-28] Experiment 26 of 48 [Blank 003, Sample 0001] [Files: Group004Sample0001*] Start Done
+[2022-10-31 16-33-13] USER CANCELED Aqualog SampleQ Execution

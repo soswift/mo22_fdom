@@ -1,0 +1,35 @@
+loaded	UniqueID	collection	name	sample	count	notes
+1	BLANK1_run7_NA	BLANK1	BLANK1		NA	
+2	51_run7_1	fdom_4_22	51	1	1	re run
+1	52_run7_2	fdom_4_22	52	2	2	
+2	53_run7_3	fdom_4_22	53	3	3	
+1	54_run7_4	fdom_april_2022	54	4	4	
+2	55_run7_5	fdom_april_2022	55	5	5	
+1	56_run7_6	fdom_april_2022	56	6	6	1/5 spill
+2	57_run7_7	fdom_april_2022	57	7	7	
+1	BLANK2_run7_NA	BLANK2	BLANK2		NA	
+2	58_run7_8	fdom_4_22	58	1	8	
+1	59_run7_9	fdom_april_2022	59	2	9	
+2	60_run7_10	fdom_4_22	60	3	10	
+1	61_run7_11	fdom_april_2022	61	4	11	1/2 spill
+2	62_run7_12	fdom_april_2022	62	5	12	1/6 spill
+1	63_run7_13	fdom_april_2022	63	6	13	1/6 spill
+2	64_run7_14	fdom_april_2022	64	7	14	1/6 spill
+1	BLANK3_run7_NA	BLANK3	BLANK3		NA	missed it
+2	65_run7_15	fdom_lag_4_22	65	1	15	
+1	66_run7_16	fdom_lag_4_22	66	2	16	1/4 spill
+2	67_run7_17	fdom_lag_4_22	67	3	17	1/5 spill
+1	69_run7_18	fdom_4_22	69	4	18	
+2	72_run7_19	fdom_4_22	72	5	19	slight spill
+1	79_run7_20	fdom_april_2022	79	6	20	
+2	117_run7_21	fdom_4_22	117	7	21	
+1	BLANK4_run7_NA	BLANK4	BLANK4		NA	kind of off, may need to re run set
+2	118_run7_22	fdom_lag_4_22	118	1	22	
+1	119_run7_23	fdom_apr_2022	119	2	23	
+2	120_run7_24	fdom_apr_2022	120	3	24	
+1	121_run7_25	fdom_4_22	121	4	25	
+2	130_run7_26	fdom_4_22	130	5	26	
+1	131_run7_27	fdom_apr_2022	131	6	27	
+2	133_run7_28	fdom_apr_2022	133	7	28	
+1	BLANK5_run7_NA	BLANK5	BLANK5		NA	kind of off
+2	135_run7_29	fdom_apr_2022	135	1	29	may need to re run

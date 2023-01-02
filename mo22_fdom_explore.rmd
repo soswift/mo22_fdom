@@ -1,0 +1,299 @@
+---
+title: "Mo22 fDOM explore"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    smooth_scroll: true 
+    fig_width: 10
+    code_folding: hide  
+date: '2022-12-05'
+---
+# Overview
+
+This rmarkdown compiles all of the Moorea 2022 fDOM data (as processed by Sean's Rscript translation of the original matlab script).
+
+
+## Projects
+
+Below is a list of projects and runs included in this analysis.
+All fDOM was run by Sean, except for Around the Island, which was run by Skye Inn.
+
+* RRCoral (Catherine)
+  * RRC_1
+  * RRC_2
+
+* Spiffy (Ralph/Irina)
+  * Spiffy
+  
+* Spiffy Lang (Ralph/Irina)
+  *SL
+
+* Diel (Wegeley/Nelson/Haas)
+  *Diel_1
+  *Diel_2
+  
+* Around the Island (Burkepile Lab)
+  * ATI_1
+  * ATI_2
+  * ATI_3
+  * ATI_4
+  * ATI_5
+  * ATI_6
+  * ATI_7
+  * ATI_8
+  
+
+Other runs that were part of Moorea 2022 but analyzed separately:
+
+* SGD
+  Cabral + Varari
+  Processed with matlab script to maintain consistency with prior data.
+  
+* TURNT
+  Processed with R script.
+  
+  
+
+  
+  
+```{r}
+source("R/src/eem_plot_functions.R")
+source("R/src/process_aqualog_functions.R")
+library(GGally)
+
+theme_set(theme_minimal())
+options(ggplot2.discrete.colour= c('#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3', '#FF6692', '#B6E880', '#FF97FF', '#FECB52'))
+
+all_runs = readRDS("data/compiled/all_runs.rds")
+
+sam_sheets = fread("data/compiled/all_sample_sheets.csv")
+index_data = fread("data/compiled/all_sample_indices.csv")
+
+
+proj = c(
+    cabral = "SGD",
+    varari = "SGD",
+    RRCoral_1 = "RRCoral",
+    RRCoral_2 = "RRCoral",
+    spiffy = "Spiffy",
+    spiffy_lang = "SpiffyLang",
+    diel_run1 = "diel",
+    diel_run2 = "diel",
+    aroundtheisland_run1 = "ati",
+    aroundtheisland_run2 = "ati",
+    aroundtheisland_run3 = "ati",
+    aroundtheisland_run4 = "ati",
+    aroundtheisland_run5 = "ati",
+    aroundtheisland_run6 = "ati",
+    aroundtheisland_run7 = "ati",
+    aroundtheisland_run8 = "ati"
+)
+
+index_data[ , project := proj[run_name]]
+
+
+```
+  
+  
+  
+  
+  
+  
+  
+```{r}
+# identify indices for plots and ordination
+
+indices = c("CobleA",
+            "CobleB",
+            "Lignin",
+            "CobleT")
+
+check_index = "HIX"
+
+
+# standardized ordination function
+ordinate_dt = function(dt,
+                       id_col = "UniqueID",
+                       cols = indices){
+  require(vegan)
+  set.seed("2022")
+  
+  ord_dat = as.matrix(dt[ , ..cols])
+  row.names(ord_dat) = dt[[id_col]]
+  
+  # drop samples that won't produce a valid distance
+  row_check = apply(ord_dat,
+                    1,
+                    function(x) any(is.na(x) |
+                                    is.infinite(x)|
+                                    sum(x) == 0))
+  
+  drop_samples = names(row_check)[row_check]
+  
+  warning(
+    paste("Dropping samples with NA, Inf, or all zero values: ",
+                paste("\n", drop_samples, collapse = "\r"))
+    )
+  
+  ord_dat = ord_dat[!(row.names(ord_dat) %in% drop_samples),]
+  
+    
+  # ordinate
+  raw_ord = metaMDS(ord_dat, distance = "bray",  autotransform = F)
+  
+  ord_points = as.data.table(raw_ord$points, keep.rownames = T)
+  ord_points[ , d_from_0 := sqrt((MDS1)^2+(MDS2)^2)]
+  setnames(ord_points, "rn", id_col)
+  
+  ord_points = merge(ord_points, dt, all.x=T, by = id_col)
+  
+  return(
+    list( points = ord_points,
+          stress = raw_ord$stress)
+    )
+  
+}
+```
+
+
+```{r}
+# main qc function
+qc_fdom = function(dat,
+                   id_col = "UniqueID",
+                   color_col = "run_name",
+                   indices,
+                   check_index = NULL){
+  
+  # organize data
+  keep_cols = c(id_col, color_col, indices, check_index)
+  
+  dat = dat[ , ..keep_cols]
+  
+  long_dat = melt.data.table(dat,
+                             id.vars = c(id_col,color_col),
+                             measure.vars = c(indices, check_index),
+                             variable.name = "index_name",
+                             value.name = "index_value")
+  
+  long_dat$log_index_value = log(long_dat$index_value)
+  
+  # summarize data
+  p_counts = ggplot(dat,
+                    aes_string(x = color_col,
+                               color = color_col))+
+              geom_bar(fill = "white")+
+              labs(title = "N samples per run")+
+              theme(axis.text.x = element_text(angle = 90))
+  
+  # pair plot
+  p_hist = ggpairs(dat, columns = indices)
+  
+  
+  # comparative violin plots
+  p_box = ggplot(long_dat, aes_string(x = "index_name",
+                               y = "log_index_value",
+                               color = color_col))+
+    #geom_jitter(alpha = 0.2)+
+    geom_boxplot(alpha = 0.7)
+  
+  # check index violin plot
+  if(!is.null(check_index)){
+  p_check = ggplot(long_dat[index_name %in% check_index,],
+                   aes_string(y = "index_value",
+                              x = color_col,
+                              color = color_col))+
+              geom_boxplot(outlier.shape = NA)+
+              geom_jitter(alpha = 0.5, pch = 19)+
+              labs(y = check_index, title = paste("Check",
+                                                  check_index,
+                                                  "Across Runs"))+
+              theme(axis.text.x = element_text(angle = 90))
+  }
+
+  # ordination plot
+  ord_points = ordinate_dt(dat,
+                           id_col = id_col,
+                           cols = indices)
+ 
+  outliers = tail(ord_points$points[order(d_from_0)])
+  y_range = range(ord_points$points$MDS1)
+  y_offset = (y_range[2]-y_range[1])/50
+ 
+  p_ord = ggplot(ord_points$points, aes(x = MDS1, y = MDS2, color = run_name))+
+    geom_point(alpha = 0.7)+
+    geom_point(data = outliers,
+               aes(x = MDS1,
+                   y = MDS2),
+               pch = 4,
+               alpha = 0.5)+
+    geom_text(data = outliers,
+               aes(x = MDS1,
+                   y = MDS2,
+                   label = UniqueID),
+              nudge_y = y_offset
+               )
+  out = list(
+    p_counts = p_counts,
+    p_hist = p_hist,
+    p_box = p_box,
+    p_check = p_check,
+    p_ord = p_ord,
+    ord_points = ord_points
+  )
+  
+  
+  return(out) 
+  
+}
+
+
+```
+  
+  
+```{r}
+#QC all mo22 fdom runs
+
+all_runs = qc_fdom(dat = index_data, 
+        indices = indices,
+        id_col = "UniqueID",
+        check_index = check_index)
+
+
+pdf("plots/exploration/all_runs_qc_plots.pdf",
+    width = 10,
+    height = 8)
+  print(all_runs)
+dev.off()
+
+# for each project
+
+runs = unique(index_data$run_name)
+
+proj_qc = list()
+
+for(i in unique(proj)){
+ proj_dat = index_data[project %in% i]
+ proj_qc[[i]] = qc_fdom(dat = proj_dat,
+                        indices = indices,
+                        id_col = "UniqueID",
+                        check_index = check_index)
+}
+
+for(i in 1:length(proj_qc)){
+  pdf(paste0("plots/exploration/",names(proj_qc)[i],"_qc_plots.pdf"),
+      width = 10, height = 8)
+  print(proj_qc[[i]])
+  dev.off()
+   
+}
+
+
+
+```
+  
+  
+  
+  
+  

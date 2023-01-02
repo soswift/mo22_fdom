@@ -1,0 +1,33 @@
+Loaded	UniqueID	name	sample	count	notes
+1	BLANK1				
+2	Mo22_0750	FSW1_T0	1	1	
+1	Mo22_0751	FSW2_T0	2	2	
+2	Mo22_0752	FSW3_T0	3	3	
+1	Mo22_0753	C_1_Tf	4	4	
+2	Mo22_0754	C_2_Tf	5	5	
+1	Mo22_0755	C_3_Tf	6	6	Some suspended white material
+2	Mo22_0756	AC_1_Tf	7	7	
+1	BLANK2				
+2	Mo22_0757	AC_2_Tf	1	8	
+1	Mo22_0758	AC_3_Tf	2	9	
+2	Mo22_0759	NAC_1_Tf	3	10	
+1	Mo22_0760	NAC_2_Tf	4	11	Some suspended white material
+2	Mo22_0761	NAC_3_Tf	5	12	Some suspended white material
+1	Mo22_0762	POM_1_Tf	6	13	
+2	Mo22_0763	POM_2_Tf	7	14	
+1	BLANK3				
+2	Mo22_0764	POM_3_Tf	1	15	
+1	Mo22_0765	NPOM_1_Tf	2	16	
+2	Mo22_0766	NPOM_2_Tf	3	17	
+1	Mo22_0767	NPOM_3_Tf	4	18	
+2	Mo22_0768	POV_1_Tf	5	19	
+1	Mo22_0769	POV_2_Tf	6	20	
+2	Mo22_0770	POV_3_Tf	7	21	
+1	BLANK4				
+2	Mo22_0771	NPOV_1_Tf	1	22	
+1	Mo22_0772	NPOV_2_Tf	2	23	
+2	Mo22_0773	NPOV_3_Tf	3	24	
+1	Mo22_0774	FSW2_1	4	25	
+2	Mo22_0775	FSW2_2	5	26	
+1	Mo22_0776	FSW2_3	6	27	
+2	Mo22_0777	C2_1	7	28	

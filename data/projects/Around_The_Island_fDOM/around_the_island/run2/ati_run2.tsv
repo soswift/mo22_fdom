@@ -1,0 +1,27 @@
+loaded	UniqueID	collection	name	sample	count	notes
+1	BLANK1_run2_NA	BLANK1	BLANK1	NA	NA	
+2	8_run2_1	fdom_apr_22	8	1	1	rerun
+1	9_run2_2	fdom_apr_2022	9	2	2	rerun
+2	10_run2_3	fdom_apr_2022	10	3	3	rerun
+1	11_run2_4	fdom_apr_22	11	4	4	rerun
+2	13_run2_5	fdom_apr_2022	13	5	5	rerun
+1	14_run2_6	fdom_apr_22	14	6	6	rerun
+2	15_run2_7	fdom_apr_22	15	7	7	rerun
+1	BLANK2_run2_NA	BLANK2	BLANK2	NA	NA	
+2	25_run2_8	fdom_04132022	25	1	8	rerun
+1	31_run2_9	fdom_april_2022	31	2	9	rerun
+2	47_run2_10	fdom_apr_22	47	3	10	rerun
+1	49_run2_11	fdom_apr_2022	49	4	11	rerun
+2	50_run2_12	fdom_april_2022	50	5	12	rerun
+1	68_run2_13	fdom_apr_2022	68	6	13	rerun
+2	70_run2_14	fdom_apr_2022	70	7	14	rerun
+1	BLANK3_run2_NA	BLANK3	BLANK3	NA	NA	blank weird
+2	71_run2_15	fdom_apr_2022	71	1	15	blank off
+	milliq_run2_16	milliq	milliq	2	16	
+	milliq_run2_17	milliq	milliq	3	17	
+	milliq_run2_18	milliq	milliq	4	18	
+	milliq_run2_19	milliq	milliq	5	19	
+	milliq_run2_20	milliq	milliq	6	20	
+	milliq_run2_21	milliq	milliq	7	21	
+	BLANK4_run2_NA	BLANK4	BLANK4	NA	NA	maybe weird
+	71_run2_22	fdom_apr_2022	71	1	22	maybe off

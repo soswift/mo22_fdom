@@ -1,0 +1,153 @@
+#######################################################################
+Log File: C:\Users\Craig Nelson\Desktop\Swift\sgd\AqualogSampleQLog.txt
+Date: Thursday, July 21, 2022
+Time: 10:31:30 AM
+#######################################################################
+[2022-07-21 10-31-30] 
+Aqualog Sample Q Experimental Parameters:
+[Aqualog Sample Q File] C:\Users\Craig Nelson\Desktop\Swift\sgd\AqualogSampleQ.aqu
+[Aqualog Experiment File] C:\Users\Craig Nelson\Desktop\Swift\AqualogSampleQ.xml
+[Output Destination Folder] C:\Users\Craig Nelson\Desktop\Swift\sgd\
+
+Output File Names:
+[Blank Group Prefix] Group
+[Blank File Base] Blank
+[Sample Prefix] Sample
+
+Blank & Sample Setup:
+[Blank Group Count] 14
+[Blank Group Start] 1
+[Samples Per Blank] 7
+[Blank Group Start] 1
+[Total Number of Blanks & Samples] 112
+
+Post Prossessing Options:
+
+Export Options:
+ASCII = True
+ABS = True
+BEM = True
+SEM = True
+
+Delay Options:
+Single Cell Kinetics = False
+Delay Before First Blank = 0 Seconds
+Delay Between Each Experiment = 0 Seconds
+
+Starting (Run/Resume) Position:
+[Blank Start Index] 0
+[Sample Start Index] 0
+################################################################################
+[2022-07-21 10-31-30] STARTING Aqualog SampleQ Execution
+[2022-07-21 10-31-33] Experiment 01 of 112 [Blank 000, Sample 0000] [Files: Group001Blank*] Start Done
+[2022-07-21 10-35-32] Experiment 02 of 112 [Blank 000, Sample 0001] [Files: Group001Sample0001*] Start Done
+[2022-07-21 10-41-40] Experiment 03 of 112 [Blank 000, Sample 0002] [Files: Group001Sample0002*] Start Done
+[2022-07-21 10-45-46] Experiment 04 of 112 [Blank 000, Sample 0003] [Files: Group001Sample0003*] Start Done
+[2022-07-21 10-51-25] Experiment 05 of 112 [Blank 000, Sample 0004] [Files: Group001Sample0004*] Start Done
+[2022-07-21 10-55-32] Experiment 06 of 112 [Blank 000, Sample 0005] [Files: Group001Sample0005*] Start Done
+[2022-07-21 11-01-11] Experiment 07 of 112 [Blank 000, Sample 0006] [Files: Group001Sample0006*] Start Done
+[2022-07-21 11-05-18] Experiment 08 of 112 [Blank 000, Sample 0007] [Files: Group001Sample0007*] Start Done
+[2022-07-21 11-10-57] Experiment 09 of 112 [Blank 001, Sample 0000] [Files: Group002Blank*] Start Done
+[2022-07-21 11-14-57] Experiment 10 of 112 [Blank 001, Sample 0001] [Files: Group002Sample0001*] Start Done
+[2022-07-21 11-20-27] Experiment 11 of 112 [Blank 001, Sample 0002] [Files: Group002Sample0002*] Start Done
+[2022-07-21 11-24-33] Experiment 12 of 112 [Blank 001, Sample 0003] [Files: Group002Sample0003*] Start Done
+[2022-07-21 11-30-18] Experiment 13 of 112 [Blank 001, Sample 0004] [Files: Group002Sample0004*] Start Done
+[2022-07-21 11-34-24] Experiment 14 of 112 [Blank 001, Sample 0005] [Files: Group002Sample0005*] Start Done
+[2022-07-21 11-39-55] Experiment 15 of 112 [Blank 001, Sample 0006] [Files: Group002Sample0006*] Start Done
+[2022-07-21 11-44-01] Experiment 16 of 112 [Blank 001, Sample 0007] [Files: Group002Sample0007*] Start Done
+[2022-07-21 11-49-46] Experiment 17 of 112 [Blank 002, Sample 0000] [Files: Group003Blank*] Start Done
+[2022-07-21 11-53-47] Experiment 18 of 112 [Blank 002, Sample 0001] [Files: Group003Sample0001*] Start Done
+[2022-07-21 11-59-19] Experiment 19 of 112 [Blank 002, Sample 0002] [Files: Group003Sample0002*] Start Done
+[2022-07-21 12-03-26] Experiment 20 of 112 [Blank 002, Sample 0003] [Files: Group003Sample0003*] Start Done
+[2022-07-21 12-09-10] Experiment 21 of 112 [Blank 002, Sample 0004] [Files: Group003Sample0004*] Start Done
+[2022-07-21 12-13-11] Experiment 22 of 112 [Blank 002, Sample 0005] [Files: Group003Sample0005*] Start Done
+[2022-07-21 12-18-31] Experiment 23 of 112 [Blank 002, Sample 0006] [Files: Group003Sample0006*] Start Done
+[2022-07-21 12-22-32] Experiment 24 of 112 [Blank 002, Sample 0007] [Files: Group003Sample0007*] Start Done
+[2022-07-21 12-27-51] Experiment 25 of 112 [Blank 003, Sample 0000] [Files: Group004Blank*] Start Done
+[2022-07-21 12-31-49] Experiment 26 of 112 [Blank 003, Sample 0001] [Files: Group004Sample0001*] Start Done
+[2022-07-21 12-37-15] Experiment 27 of 112 [Blank 003, Sample 0002] [Files: Group004Sample0002*] Start Done
+[2022-07-21 12-41-16] Experiment 28 of 112 [Blank 003, Sample 0003] [Files: Group004Sample0003*] Start Done
+[2022-07-21 12-46-38] Experiment 29 of 112 [Blank 003, Sample 0004] [Files: Group004Sample0004*] Start Done
+[2022-07-21 12-50-39] Experiment 30 of 112 [Blank 003, Sample 0005] [Files: Group004Sample0005*] Start Done
+[2022-07-21 12-56-03] Experiment 31 of 112 [Blank 003, Sample 0006] [Files: Group004Sample0006*] Start Done
+[2022-07-21 13-00-04] Experiment 32 of 112 [Blank 003, Sample 0007] [Files: Group004Sample0007*] Start Done
+[2022-07-21 13-05-38] Experiment 33 of 112 [Blank 004, Sample 0000] [Files: Group005Blank*] Start Done
+[2022-07-21 13-09-38] Experiment 34 of 112 [Blank 004, Sample 0001] [Files: Group005Sample0001*] Start Done
+[2022-07-21 13-14-49] Experiment 35 of 112 [Blank 004, Sample 0002] [Files: Group005Sample0002*] Start Done
+[2022-07-21 13-18-50] Experiment 36 of 112 [Blank 004, Sample 0003] [Files: Group005Sample0003*] Start Done
+[2022-07-21 13-24-05] Experiment 37 of 112 [Blank 004, Sample 0004] [Files: Group005Sample0004*] Start Done
+[2022-07-21 13-28-06] Experiment 38 of 112 [Blank 004, Sample 0005] [Files: Group005Sample0005*] Start Done
+[2022-07-21 13-33-56] Experiment 39 of 112 [Blank 004, Sample 0006] [Files: Group005Sample0006*] Start Done
+[2022-07-21 13-37-57] Experiment 40 of 112 [Blank 004, Sample 0007] [Files: Group005Sample0007*] Start Done
+[2022-07-21 13-43-25] Experiment 41 of 112 [Blank 005, Sample 0000] [Files: Group006Blank*] Start Done
+[2022-07-21 13-47-24] Experiment 42 of 112 [Blank 005, Sample 0001] [Files: Group006Sample0001*] Start Done
+[2022-07-21 13-53-08] Experiment 43 of 112 [Blank 005, Sample 0002] [Files: Group006Sample0002*] Start Done
+[2022-07-21 13-57-09] Experiment 44 of 112 [Blank 005, Sample 0003] [Files: Group006Sample0003*] Start Done
+[2022-07-21 14-02-34] Experiment 45 of 112 [Blank 005, Sample 0004] [Files: Group006Sample0004*] Start Done
+[2022-07-21 14-06-35] Experiment 46 of 112 [Blank 005, Sample 0005] [Files: Group006Sample0005*] Start Done
+[2022-07-21 14-12-18] Experiment 47 of 112 [Blank 005, Sample 0006] [Files: Group006Sample0006*] Start Done
+[2022-07-21 14-16-19] Experiment 48 of 112 [Blank 005, Sample 0007] [Files: Group006Sample0007*] Start Done
+[2022-07-21 14-22-12] Experiment 49 of 112 [Blank 006, Sample 0000] [Files: Group007Blank*] Start Done
+[2022-07-21 14-26-10] Experiment 50 of 112 [Blank 006, Sample 0001] [Files: Group007Sample0001*] Start Done
+[2022-07-21 14-31-34] Experiment 51 of 112 [Blank 006, Sample 0002] [Files: Group007Sample0002*] Start Done
+[2022-07-21 14-35-35] Experiment 52 of 112 [Blank 006, Sample 0003] [Files: Group007Sample0003*] Start Done
+[2022-07-21 14-40-55] Experiment 53 of 112 [Blank 006, Sample 0004] [Files: Group007Sample0004*] Start Done
+[2022-07-21 14-44-56] Experiment 54 of 112 [Blank 006, Sample 0005] [Files: Group007Sample0005*] Start Done
+[2022-07-21 14-50-27] Experiment 55 of 112 [Blank 006, Sample 0006] [Files: Group007Sample0006*] Start Done
+[2022-07-21 14-54-28] Experiment 56 of 112 [Blank 006, Sample 0007] [Files: Group007Sample0007*] Start Done
+[2022-07-21 15-00-25] Experiment 57 of 112 [Blank 007, Sample 0000] [Files: Group008Blank*] Start Done
+[2022-07-21 15-04-23] Experiment 58 of 112 [Blank 007, Sample 0001] [Files: Group008Sample0001*] Start Done
+[2022-07-21 15-10-08] Experiment 59 of 112 [Blank 007, Sample 0002] [Files: Group008Sample0002*] Start Done
+[2022-07-21 15-14-09] Experiment 60 of 112 [Blank 007, Sample 0003] [Files: Group008Sample0003*] Start Done
+[2022-07-21 15-20-14] Experiment 61 of 112 [Blank 007, Sample 0004] [Files: Group008Sample0004*] Start Done
+[2022-07-21 15-24-15] Experiment 62 of 112 [Blank 007, Sample 0005] [Files: Group008Sample0005*] Start Done
+[2022-07-21 15-29-50] Experiment 63 of 112 [Blank 007, Sample 0006] [Files: Group008Sample0006*] Start Done
+[2022-07-21 15-33-51] Experiment 64 of 112 [Blank 007, Sample 0007] [Files: Group008Sample0007*] Start Done
+[2022-07-21 15-40-09] Experiment 65 of 112 [Blank 008, Sample 0000] [Files: Group009Blank*] Start Done
+[2022-07-21 15-44-07] Experiment 66 of 112 [Blank 008, Sample 0001] [Files: Group009Sample0001*] Start Done
+[2022-07-21 15-49-52] Experiment 67 of 112 [Blank 008, Sample 0002] [Files: Group009Sample0002*] Start Done
+[2022-07-21 15-53-53] Experiment 68 of 112 [Blank 008, Sample 0003] [Files: Group009Sample0003*] Start Done
+[2022-07-21 16-00-04] Experiment 69 of 112 [Blank 008, Sample 0004] [Files: Group009Sample0004*] Start Done
+[2022-07-21 16-04-05] Experiment 70 of 112 [Blank 008, Sample 0005] [Files: Group009Sample0005*] Start Done
+[2022-07-21 16-09-23] Experiment 71 of 112 [Blank 008, Sample 0006] [Files: Group009Sample0006*] Start Done
+[2022-07-21 16-13-24] Experiment 72 of 112 [Blank 008, Sample 0007] [Files: Group009Sample0007*] Start Done
+[2022-07-21 16-19-08] Experiment 73 of 112 [Blank 009, Sample 0000] [Files: Group010Blank*] Start Done
+[2022-07-21 16-23-06] Experiment 74 of 112 [Blank 009, Sample 0001] [Files: Group010Sample0001*] Start Done
+[2022-07-21 16-29-52] Experiment 75 of 112 [Blank 009, Sample 0002] [Files: Group010Sample0002*] Start Done
+[2022-07-21 16-33-53] Experiment 76 of 112 [Blank 009, Sample 0003] [Files: Group010Sample0003*] Start Done
+[2022-07-21 16-40-33] Experiment 77 of 112 [Blank 009, Sample 0004] [Files: Group010Sample0004*] Start Done
+[2022-07-21 16-44-34] Experiment 78 of 112 [Blank 009, Sample 0005] [Files: Group010Sample0005*] Start Done
+[2022-07-21 16-51-10] Experiment 79 of 112 [Blank 009, Sample 0006] [Files: Group010Sample0006*] Start Done
+[2022-07-21 16-55-11] Experiment 80 of 112 [Blank 009, Sample 0007] [Files: Group010Sample0007*] Start Done
+[2022-07-21 17-01-34] Experiment 81 of 112 [Blank 010, Sample 0000] [Files: Group011Blank*] Start Done
+[2022-07-21 17-05-32] Experiment 82 of 112 [Blank 010, Sample 0001] [Files: Group011Sample0001*] Start Done
+[2022-07-21 17-11-43] Experiment 83 of 112 [Blank 010, Sample 0002] [Files: Group011Sample0002*] Start Done
+[2022-07-21 17-15-44] Experiment 84 of 112 [Blank 010, Sample 0003] [Files: Group011Sample0003*] Start Done
+[2022-07-21 17-22-05] Experiment 85 of 112 [Blank 010, Sample 0004] [Files: Group011Sample0004*] Start Done
+[2022-07-21 17-26-06] Experiment 86 of 112 [Blank 010, Sample 0005] [Files: Group011Sample0005*] Start Done
+[2022-07-21 17-31-47] Experiment 87 of 112 [Blank 010, Sample 0006] [Files: Group011Sample0006*] Start Done
+[2022-07-21 17-35-48] Experiment 88 of 112 [Blank 010, Sample 0007] [Files: Group011Sample0007*] Start Done
+[2022-07-21 17-41-17] Experiment 89 of 112 [Blank 011, Sample 0000] [Files: Group012Blank*] Start Done
+[2022-07-21 17-45-15] Experiment 90 of 112 [Blank 011, Sample 0001] [Files: Group012Sample0001*] Start Done
+[2022-07-21 17-51-03] Experiment 91 of 112 [Blank 011, Sample 0002] [Files: Group012Sample0002*] Start Done
+[2022-07-21 17-55-04] Experiment 92 of 112 [Blank 011, Sample 0003] [Files: Group012Sample0003*] Start Done
+[2022-07-21 18-05-08] Experiment 93 of 112 [Blank 011, Sample 0004] [Files: Group012Sample0004*] Start Done
+[2022-07-21 18-09-09] Experiment 94 of 112 [Blank 011, Sample 0005] [Files: Group012Sample0005*] Start Done
+[2022-07-21 18-15-04] Experiment 95 of 112 [Blank 011, Sample 0006] [Files: Group012Sample0006*] Start Done
+[2022-07-21 18-19-05] Experiment 96 of 112 [Blank 011, Sample 0007] [Files: Group012Sample0007*] Start Done
+[2022-07-21 18-25-01] Experiment 97 of 112 [Blank 012, Sample 0000] [Files: Group013Blank*] Start Done
+[2022-07-21 18-28-59] Experiment 98 of 112 [Blank 012, Sample 0001] [Files: Group013Sample0001*] Start Done
+[2022-07-21 18-34-31] Experiment 99 of 112 [Blank 012, Sample 0002] [Files: Group013Sample0002*] Start Done
+[2022-07-21 18-38-32] Experiment 100 of 112 [Blank 012, Sample 0003] [Files: Group013Sample0003*] Start Done
+[2022-07-21 18-43-55] Experiment 101 of 112 [Blank 012, Sample 0004] [Files: Group013Sample0004*] Start
+[2022-07-21 18-47-55] ##### WARNING: CCD SATURATION OCCURRED ##### Done
+[2022-07-21 18-47-56] Experiment 102 of 112 [Blank 012, Sample 0005] [Files: Group013Sample0005*] Start Done
+[2022-07-21 18-53-18] Experiment 103 of 112 [Blank 012, Sample 0006] [Files: Group013Sample0006*] Start Done
+[2022-07-21 18-57-19] Experiment 104 of 112 [Blank 012, Sample 0007] [Files: Group013Sample0007*] Start Done
+[2022-07-21 19-02-54] Experiment 105 of 112 [Blank 013, Sample 0000] [Files: Group014Blank*] Start Done
+[2022-07-21 19-06-52] Experiment 106 of 112 [Blank 013, Sample 0001] [Files: Group014Sample0001*] Start Done
+[2022-07-21 19-12-17] Experiment 107 of 112 [Blank 013, Sample 0002] [Files: Group014Sample0002*] Start Done
+[2022-07-21 19-16-18] Experiment 108 of 112 [Blank 013, Sample 0003] [Files: Group014Sample0003*] Start Done
+[2022-07-21 19-21-41] Experiment 109 of 112 [Blank 013, Sample 0004] [Files: Group014Sample0004*] Start Done
+[2022-07-21 19-25-42] Experiment 110 of 112 [Blank 013, Sample 0005] [Files: Group014Sample0005*] Start Done
+[2022-07-21 19-29-53] USER CANCELED Aqualog SampleQ Execution

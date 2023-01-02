@@ -1,0 +1,1500 @@
+Reading data files in directory: data/projects/Around_The_Island_fDOM/around_the_island/run4/
+Reading in sample key
+ [1] "Reading data files in directory: data/projects/Around_The_Island_fDOM/around_the_island/run5/" "Reading in sample key"                                                                        
+ [3] "Blanks detected in sample key = 6"                                                             "Total N samples = 38"                                                                         
+ [5] "Total N groups = 6"                                                                            "Total N blanks  = 6"                                                                          
+ [7] "N samples in each group = 7"                                                                   "N samples in last group = 3"                                                                  
+ [9] "Absorbance files detected, including absorbance data and IFE correction"                       "writing out sample_sheet as: aroundtheisland_run5_sample_sheet.csv"                           
+[11] "extracting EEM data from files"                                                                "[1] \"Good. All SEM files exist.\""                                                           
+[13] "Absorbance (ABS) files detected, reading absorbance data"                                      "calculating Raman Areas"                                                                      
+[15] "performing Inner Filter Correction"                                                            "performing Raman scaling"                                                                     
+[17] "performing Rayleigh scatter subtraction"                                                       "writing out cleaned EEM files to directory processed_data > processed_matrices"               
+[19] "calculating indices"                                                                           "index calculated:  CobleA"                                                                    
+[21] "index calculated:  CobleB"                                                                     "index calculated:  CobleC"                                                                    
+[23] "index calculated:  CobleM"                                                                     "index calculated:  CobleT"                                                                    
+[25] "index calculated:  Fpeak"                                                                      "index calculated:  Stedmon_D"                                                                 
+[27] "index calculated:  Optical_Brighteners"                                                        "index calculated:  dieselBandII"                                                              
+[29] "index calculated:  Petroleum"                                                                  "index calculated:  Lignin"                                                                    
+[31] "index calculated:  BIX"                                                                        "index calculated:  HIX"                                                                       
+[33] "index calculated:  FI"                                                                         "index calculated:  M_to_C"                                                                    
+[35] "index calculated:  JP5_empirical"                                                              "index calculated:  JP5_normalized"                                                            
+[37] "index calculated:  Diesel_Chen"                                                                "writing out indices to processed_data > fDOM_indices_out.csv"                                 
+[39] "DONE: indices written out to aroundtheisland_run5_fDOM_indices_out.csv"                       
+ [1] "Reading data files in directory: data/projects/Around_The_Island_fDOM/around_the_island/run1/" "Reading in sample key"                                                                        
+ [3] "Blanks detected in sample key = 3"                                                             "Total N samples = 15"                                                                         
+ [5] "Total N groups = 3"                                                                            "Total N blanks  = 3"                                                                          
+ [7] "N samples in each group = 7"                                                                   "N samples in last group = 1"                                                                  
+ [9] "Absorbance files detected, including absorbance data and IFE correction"                       "writing out sample_sheet as: aroundtheisland_run1_sample_sheet.csv"                           
+[11] "extracting EEM data from files"                                                                "[1] \"Good. All SEM files exist.\""                                                           
+[13] "Absorbance (ABS) files detected, reading absorbance data"                                      "calculating Raman Areas"                                                                      
+[15] "performing Inner Filter Correction"                                                            "performing Raman scaling"                                                                     
+[17] "performing Rayleigh scatter subtraction"                                                       "writing out cleaned EEM files to directory processed_data > processed_matrices"               
+[19] "calculating indices"                                                                           "index calculated:  CobleA"                                                                    
+[21] "index calculated:  CobleB"                                                                     "index calculated:  CobleC"                                                                    
+[23] "index calculated:  CobleM"                                                                     "index calculated:  CobleT"                                                                    
+[25] "index calculated:  Fpeak"                                                                      "index calculated:  Stedmon_D"                                                                 
+[27] "index calculated:  Optical_Brighteners"                                                        "index calculated:  dieselBandII"                                                              
+[29] "index calculated:  Petroleum"                                                                  "index calculated:  Lignin"                                                                    
+[31] "index calculated:  BIX"                                                                        "index calculated:  HIX"                                                                       
+[33] "index calculated:  FI"                                                                         "index calculated:  M_to_C"                                                                    
+[35] "index calculated:  JP5_empirical"                                                              "index calculated:  JP5_normalized"                                                            
+[37] "index calculated:  Diesel_Chen"                                                                "writing out indices to processed_data > fDOM_indices_out.csv"                                 
+[39] "DONE: indices written out to aroundtheisland_run1_fDOM_indices_out.csv"                       
+ [1] "Reading data files in directory: data/projects/Around_The_Island_fDOM/around_the_island/run4/" "Reading in sample key"                                                                        
+ [3] "Blanks detected in sample key = 4"                                                             "Total N samples = 22"                                                                         
+ [5] "Total N groups = 4"                                                                            "Total N blanks  = 4"                                                                          
+ [7] "N samples in each group = 7"                                                                   "N samples in last group = 1"                                                                  
+ [9] "Absorbance files detected, including absorbance data and IFE correction"                       "writing out sample_sheet as: aroundtheisland_run4_sample_sheet.csv"                           
+[11] "extracting EEM data from files"                                                                "[1] \"Good. All SEM files exist.\""                                                           
+[13] "Absorbance (ABS) files detected, reading absorbance data"                                      "calculating Raman Areas"                                                                      
+[15] "performing Inner Filter Correction"                                                            "performing Raman scaling"                                                                     
+[17] "performing Rayleigh scatter subtraction"                                                       "writing out cleaned EEM files to directory processed_data > processed_matrices"               
+[19] "calculating indices"                                                                           "index calculated:  CobleA"                                                                    
+[21] "index calculated:  CobleB"                                                                     "index calculated:  CobleC"                                                                    
+[23] "index calculated:  CobleM"                                                                     "index calculated:  CobleT"                                                                    
+[25] "index calculated:  Fpeak"                                                                      "index calculated:  Stedmon_D"                                                                 
+[27] "index calculated:  Optical_Brighteners"                                                        "index calculated:  dieselBandII"                                                              
+[29] "index calculated:  Petroleum"                                                                  "index calculated:  Lignin"                                                                    
+[31] "index calculated:  BIX"                                                                        "index calculated:  HIX"                                                                       
+[33] "index calculated:  FI"                                                                         "index calculated:  M_to_C"                                                                    
+[35] "index calculated:  JP5_empirical"                                                              "index calculated:  JP5_normalized"                                                            
+[37] "index calculated:  Diesel_Chen"                                                                "writing out indices to processed_data > fDOM_indices_out.csv"                                 
+[39] "DONE: indices written out to aroundtheisland_run4_fDOM_indices_out.csv"                       
+ [1] "Reading data files in directory: data/projects/RRCoral_fDOM/Run1/"              "Reading in sample key"                                                         
+ [3] "Blanks detected in sample key = 4"                                              "Total N samples = 28"                                                          
+ [5] "Total N groups = 4"                                                             "Total N blanks  = 4"                                                           
+ [7] "N samples in each group = 7"                                                    "N samples in last group = 7"                                                   
+ [9] "Absorbance files detected, including absorbance data and IFE correction"        "writing out sample_sheet as: RRCoral_1_sample_sheet.csv"                       
+[11] "extracting EEM data from files"                                                 "[1] \"Good. All SEM files exist.\""                                            
+[13] "Absorbance (ABS) files detected, reading absorbance data"                       "calculating Raman Areas"                                                       
+[15] "performing Inner Filter Correction"                                             "performing Raman scaling"                                                      
+[17] "performing Rayleigh scatter subtraction"                                        "writing out cleaned EEM files to directory processed_data > processed_matrices"
+[19] "calculating indices"                                                            "index calculated:  CobleA"                                                     
+[21] "index calculated:  CobleB"                                                      "index calculated:  CobleC"                                                     
+[23] "index calculated:  CobleM"                                                      "index calculated:  CobleT"                                                     
+[25] "index calculated:  Fpeak"                                                       "index calculated:  Stedmon_D"                                                  
+[27] "index calculated:  Optical_Brighteners"                                         "index calculated:  dieselBandII"                                               
+[29] "index calculated:  Petroleum"                                                   "index calculated:  Lignin"                                                     
+[31] "index calculated:  BIX"                                                         "index calculated:  HIX"                                                        
+[33] "index calculated:  FI"                                                          "index calculated:  M_to_C"                                                     
+[35] "index calculated:  JP5_empirical"                                               "index calculated:  JP5_normalized"                                             
+[37] "index calculated:  Diesel_Chen"                                                 "writing out indices to processed_data > fDOM_indices_out.csv"                  
+[39] "DONE: indices written out to RRCoral_1_fDOM_indices_out.csv"                   
+ [1] "Reading data files in directory: data/projects/RRCoral_fDOM/Run2/"              "Reading in sample key"                                                         
+ [3] "Blanks detected in sample key = 5"                                              "Total N samples = 35"                                                          
+ [5] "Total N groups = 5"                                                             "Total N blanks  = 5"                                                           
+ [7] "N samples in each group = 7"                                                    "N samples in last group = 7"                                                   
+ [9] "Absorbance files detected, including absorbance data and IFE correction"        "writing out sample_sheet as: RRCoral_2_sample_sheet.csv"                       
+[11] "extracting EEM data from files"                                                 "[1] \"Good. All SEM files exist.\""                                            
+[13] "Absorbance (ABS) files detected, reading absorbance data"                       "calculating Raman Areas"                                                       
+[15] "performing Inner Filter Correction"                                             "performing Raman scaling"                                                      
+[17] "performing Rayleigh scatter subtraction"                                        "writing out cleaned EEM files to directory processed_data > processed_matrices"
+[19] "calculating indices"                                                            "index calculated:  CobleA"                                                     
+[21] "index calculated:  CobleB"                                                      "index calculated:  CobleC"                                                     
+[23] "index calculated:  CobleM"                                                      "index calculated:  CobleT"                                                     
+[25] "index calculated:  Fpeak"                                                       "index calculated:  Stedmon_D"                                                  
+[27] "index calculated:  Optical_Brighteners"                                         "index calculated:  dieselBandII"                                               
+[29] "index calculated:  Petroleum"                                                   "index calculated:  Lignin"                                                     
+[31] "index calculated:  BIX"                                                         "index calculated:  HIX"                                                        
+[33] "index calculated:  FI"                                                          "index calculated:  M_to_C"                                                     
+[35] "index calculated:  JP5_empirical"                                               "index calculated:  JP5_normalized"                                             
+[37] "index calculated:  Diesel_Chen"                                                 "writing out indices to processed_data > fDOM_indices_out.csv"                  
+[39] "DONE: indices written out to RRCoral_2_fDOM_indices_out.csv"                   
+ [1] "Reading data files in directory: data/projects/Spiffy_fDOM/spiffy/"             "Reading in sample key"                                                         
+ [3] "Blanks detected in sample key = 3"                                              "Total N samples = 19"                                                          
+ [5] "Total N groups = 3"                                                             "Total N blanks  = 3"                                                           
+ [7] "N samples in each group = 7"                                                    "N samples in last group = 5"                                                   
+ [9] "Absorbance files detected, including absorbance data and IFE correction"        "writing out sample_sheet as: spiffy_sample_sheet.csv"                          
+[11] "extracting EEM data from files"                                                 "[1] \"Good. All SEM files exist.\""                                            
+[13] "Absorbance (ABS) files detected, reading absorbance data"                       "calculating Raman Areas"                                                       
+[15] "performing Inner Filter Correction"                                             "performing Raman scaling"                                                      
+[17] "performing Rayleigh scatter subtraction"                                        "writing out cleaned EEM files to directory processed_data > processed_matrices"
+[19] "calculating indices"                                                            "index calculated:  CobleA"                                                     
+[21] "index calculated:  CobleB"                                                      "index calculated:  CobleC"                                                     
+[23] "index calculated:  CobleM"                                                      "index calculated:  CobleT"                                                     
+[25] "index calculated:  Fpeak"                                                       "index calculated:  Stedmon_D"                                                  
+[27] "index calculated:  Optical_Brighteners"                                         "index calculated:  dieselBandII"                                               
+[29] "index calculated:  Petroleum"                                                   "index calculated:  Lignin"                                                     
+[31] "index calculated:  BIX"                                                         "index calculated:  HIX"                                                        
+[33] "index calculated:  FI"                                                          "index calculated:  M_to_C"                                                     
+[35] "index calculated:  JP5_empirical"                                               "index calculated:  JP5_normalized"                                             
+[37] "index calculated:  Diesel_Chen"                                                 "writing out indices to processed_data > fDOM_indices_out.csv"                  
+[39] "DONE: indices written out to spiffy_fDOM_indices_out.csv"                      
+ [1] "Reading data files in directory: data/projects/Spiffy_Lang_fDOM/spiffy_lang/"   "Reading in sample key"                                                         
+ [3] "Blanks detected in sample key = 6"                                              "Total N samples = 42"                                                          
+ [5] "Total N groups = 6"                                                             "Total N blanks  = 6"                                                           
+ [7] "N samples in each group = 7"                                                    "N samples in last group = 7"                                                   
+ [9] "Absorbance files detected, including absorbance data and IFE correction"        "writing out sample_sheet as: spiffy_lang_sample_sheet.csv"                     
+[11] "extracting EEM data from files"                                                 "[1] \"Good. All SEM files exist.\""                                            
+[13] "Absorbance (ABS) files detected, reading absorbance data"                       "calculating Raman Areas"                                                       
+[15] "performing Inner Filter Correction"                                             "performing Raman scaling"                                                      
+[17] "performing Rayleigh scatter subtraction"                                        "writing out cleaned EEM files to directory processed_data > processed_matrices"
+[19] "calculating indices"                                                            "index calculated:  CobleA"                                                     
+[21] "index calculated:  CobleB"                                                      "index calculated:  CobleC"                                                     
+[23] "index calculated:  CobleM"                                                      "index calculated:  CobleT"                                                     
+[25] "index calculated:  Fpeak"                                                       "index calculated:  Stedmon_D"                                                  
+[27] "index calculated:  Optical_Brighteners"                                         "index calculated:  dieselBandII"                                               
+[29] "index calculated:  Petroleum"                                                   "index calculated:  Lignin"                                                     
+[31] "index calculated:  BIX"                                                         "index calculated:  HIX"                                                        
+[33] "index calculated:  FI"                                                          "index calculated:  M_to_C"                                                     
+[35] "index calculated:  JP5_empirical"                                               "index calculated:  JP5_normalized"                                             
+[37] "index calculated:  Diesel_Chen"                                                 "writing out indices to processed_data > fDOM_indices_out.csv"                  
+[39] "DONE: indices written out to spiffy_lang_fDOM_indices_out.csv"                 
+ [1] "Reading data files in directory: data/projects/Diel/run1/diel/"                 "Reading in sample key"                                                         
+ [3] "Blanks detected in sample key = 5"                                              "Total N samples = 35"                                                          
+ [5] "Total N groups = 5"                                                             "Total N blanks  = 5"                                                           
+ [7] "N samples in each group = 7"                                                    "N samples in last group = 7"                                                   
+ [9] "Absorbance files detected, including absorbance data and IFE correction"        "writing out sample_sheet as: diel_run1_sample_sheet.csv"                       
+[11] "extracting EEM data from files"                                                 "[1] \"Good. All SEM files exist.\""                                            
+[13] "Absorbance (ABS) files detected, reading absorbance data"                       "calculating Raman Areas"                                                       
+[15] "performing Inner Filter Correction"                                             "performing Raman scaling"                                                      
+[17] "performing Rayleigh scatter subtraction"                                        "writing out cleaned EEM files to directory processed_data > processed_matrices"
+[19] "calculating indices"                                                            "index calculated:  CobleA"                                                     
+[21] "index calculated:  CobleB"                                                      "index calculated:  CobleC"                                                     
+[23] "index calculated:  CobleM"                                                      "index calculated:  CobleT"                                                     
+[25] "index calculated:  Fpeak"                                                       "index calculated:  Stedmon_D"                                                  
+[27] "index calculated:  Optical_Brighteners"                                         "index calculated:  dieselBandII"                                               
+[29] "index calculated:  Petroleum"                                                   "index calculated:  Lignin"                                                     
+[31] "index calculated:  BIX"                                                         "index calculated:  HIX"                                                        
+[33] "index calculated:  FI"                                                          "index calculated:  M_to_C"                                                     
+[35] "index calculated:  JP5_empirical"                                               "index calculated:  JP5_normalized"                                             
+[37] "index calculated:  Diesel_Chen"                                                 "writing out indices to processed_data > fDOM_indices_out.csv"                  
+[39] "DONE: indices written out to diel_run1_fDOM_indices_out.csv"                   
+ [1] "Reading data files in directory: data/projects/Diel/run2/"                      "Reading in sample key"                                                         
+ [3] "Blanks detected in sample key = 6"                                              "Total N samples = 40"                                                          
+ [5] "Total N groups = 6"                                                             "Total N blanks  = 6"                                                           
+ [7] "N samples in each group = 7"                                                    "N samples in last group = 5"                                                   
+ [9] "Absorbance files detected, including absorbance data and IFE correction"        "writing out sample_sheet as: diel_run2_sample_sheet.csv"                       
+[11] "extracting EEM data from files"                                                 "[1] \"Good. All SEM files exist.\""                                            
+[13] "Absorbance (ABS) files detected, reading absorbance data"                       "calculating Raman Areas"                                                       
+[15] "performing Inner Filter Correction"                                             "performing Raman scaling"                                                      
+[17] "performing Rayleigh scatter subtraction"                                        "writing out cleaned EEM files to directory processed_data > processed_matrices"
+[19] "calculating indices"                                                            "index calculated:  CobleA"                                                     
+[21] "index calculated:  CobleB"                                                      "index calculated:  CobleC"                                                     
+[23] "index calculated:  CobleM"                                                      "index calculated:  CobleT"                                                     
+[25] "index calculated:  Fpeak"                                                       "index calculated:  Stedmon_D"                                                  
+[27] "index calculated:  Optical_Brighteners"                                         "index calculated:  dieselBandII"                                               
+[29] "index calculated:  Petroleum"                                                   "index calculated:  Lignin"                                                     
+[31] "index calculated:  BIX"                                                         "index calculated:  HIX"                                                        
+[33] "index calculated:  FI"                                                          "index calculated:  M_to_C"                                                     
+[35] "index calculated:  JP5_empirical"                                               "index calculated:  JP5_normalized"                                             
+[37] "index calculated:  Diesel_Chen"                                                 "writing out indices to processed_data > fDOM_indices_out.csv"                  
+[39] "DONE: indices written out to diel_run2_fDOM_indices_out.csv"                   
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[36]]
+
+[[37]]
+
+[[38]]
+
+[[39]]
+
+[[40]]
+
+[[41]]
+
+[[42]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[36]]
+
+[[37]]
+
+[[38]]
+
+[[39]]
+
+[[40]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[36]]
+
+[[37]]
+
+[[38]]
+
+[[39]]
+
+[[40]]
+
+[[41]]
+
+[[42]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[36]]
+
+[[37]]
+
+[[38]]
+
+[[39]]
+
+[[40]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[36]]
+
+[[37]]
+
+[[38]]
+
+[[39]]
+
+[[40]]
+
+[[41]]
+
+[[42]]
+
+[[43]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[8]]
+
+[[9]]
+
+[[10]]
+
+[[11]]
+
+[[12]]
+
+[[13]]
+
+[[14]]
+
+[[15]]
+
+[[16]]
+
+[[17]]
+
+[[18]]
+
+[[19]]
+
+[[20]]
+
+[[21]]
+
+[[22]]
+
+[[23]]
+
+[[24]]
+
+[[25]]
+
+[[26]]
+
+[[27]]
+
+[[28]]
+
+[[29]]
+
+[[30]]
+
+[[31]]
+
+[[32]]
+
+[[33]]
+
+[[34]]
+
+[[35]]
+
+[[36]]
+
+[[37]]
+
+[[38]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+
+[[7]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[1]]
+
+[[2]]
+
+[[3]]
+
+[[4]]
+
+[[5]]
+
+[[6]]
+

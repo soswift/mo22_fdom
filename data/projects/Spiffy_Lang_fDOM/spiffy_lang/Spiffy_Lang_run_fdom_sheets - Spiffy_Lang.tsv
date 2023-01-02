@@ -1,0 +1,49 @@
+Loaded	UniqueID	name	sample	count	notes
+1	BLANK1				
+2	Mo22_0208	SL_3_B6_1	1	1	Small brown particles
+1	Mo22_0184	SL_2_B6_1	2	2	Small brown particles
+2	Mo22_0182	SL_2_B5_1	3	3	
+1	Mo22_0210	SL_3_B7_1	4	4	
+2	Mo22_0172	SL_2_F1_1	5	5	
+1	Mo22_0168	SL_2_F3_1	6	6	
+2	Mo22_0170	SL_2_F2_1	7	7	
+1	BLANK2	SL_			
+2	Mo22_0142	SL_1_OS_1	1	8	
+1	Mo22_0188	SL_2_B8_1	2	9	
+2	Mo22_0186	SL_2_B7_1	3	10	
+1	Mo22_0164	SL_1_B8_1	4	11	
+2	Mo22_0144	SL_1_F3_1	5	12	
+1	Mo22_0204	SL_3_B4_1	6	13	
+2	Mo22_0206	SL_3_B5_1	7	14	
+1	BLANK3	SL_			
+2	Mo22_0166	SL_2_OS_1	1	15	
+1	Mo22_0158	SL_1_B5_1	2	16	
+2	Mo22_0160	SL_1_B6_1	3	17	
+1	Mo22_0150	SL_1_B1_1	4	18	
+2	Mo22_0152	SL_1_B2_1	5	19	
+	Mo22_0156	SL_1_B4_1	6	20	
+	Mo22_0154	SL_1_B3_1	7	21	
+	BLANK4	SL_			
+	Mo22_0146	SL_1_F2_1	1	22	
+	Mo22_0194	SL_3_F2_1	2	23	
+	Mo22_0192	SL_3_F3_1	3	24	
+	Mo22_0178	SL_2_B3_1	4	25	
+	Mo22_0174	SL_2_B1_1	5	26	
+	Mo22_0180	SL_2_B4_1	6	27	
+	Mo22_0176	SL_2_B2_1	7	28	
+	BLANK5	SL_			
+	Mo22_0202	SL_3_B3_1	1	29	
+	Mo22_0198	SL_3_B1_1	2	30	
+	Mo22_0196	SL_3_F1_1	3	31	
+	Mo22_0190	SL_3_OS_1	4	32	
+	Mo22_0200	SL_3_B2_1	5	33	
+	Mo22_0697	Blank_Autosmpler1	6	34	
+	Mo22_0702	Blank_pump3_gff	7	35	
+	BLANK6				
+	Mo22_0700	Blank_pump1	1	36	
+	Mo22_0162	SL_1_B7_1	2	37	
+	Mo22_0701	Blank_pump2	3	38	
+	Mo22_0148	SL_1_F1_1	4	39	
+	Mo22_0699	Blank_Autosmpler3	5	40	
+	Mo22_0698	Blank_Autosmpler2	6	41	
+	SL_empty	empty	empty	empty	

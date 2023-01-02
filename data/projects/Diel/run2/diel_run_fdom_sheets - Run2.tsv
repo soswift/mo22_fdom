@@ -1,0 +1,47 @@
+Loaded	collection	name	UniqueID	sample	count	notes
+1	BLANK1		BLANK1			
+2	Mo22_0063	Channel 3	Mo22_0063	1	1	
+1	Mo22_0663	Channel 3	Mo22_0663	2	2	
+2	Mo22_0592	NA	Mo22_0592	3	3	
+1	Mo22_0029	Channel 9	Mo22_0029	4	4	
+2	Mo22_0588	NA	Mo22_0588	5	5	
+1	Mo22_0020	Channel 10	Mo22_0020	6	6	
+2	Mo22_0616	Channel 6	Mo22_0616	7	7	
+1	BLANK2		BLANK2			
+2	Mo22_0026	Channel 6	Mo22_0026	1	8	This one looks like a blank
+1	Mo22_0679	Channel 7	Mo22_0679	2	9	brown particles
+2	Mo22_0064	Channel 4	Mo22_0064	3	10	
+1	Mo22_0052	Channel 10	Mo22_0052	4	11	
+2	Mo22_0082	Channel 2	Mo22_0082	5	12	
+1	Mo22_0018	Channel 8	Mo22_0018	6	13	
+2	Mo22_0649	Channel 7	Mo22_0649	7	14	
+1	BLANK3		BLANK3			
+2	Mo22_0065	Channel 5	Mo22_0065	1	15	
+1	Mo22_0674	Channel 2	Mo22_0674	2	16	
+2	Mo22_0606	Channel 6	Mo22_0606	3	17	
+1	Mo22_061	Channel 1	Mo22_061	4	18	
+2	Mo22_022	Channel 2	Mo22_022	5	19	
+1	Mo22_0658	DB_A1_0414_00	Mo22_0658	6	20	
+2	Mo22_0647	Channel 5	Mo22_0647	7	21	
+1	BLANK4		BLANK4			
+2	Mo22_099	NA	Mo22_099	1	22	
+1	Mo22_066	Channel 6	Mo22_066	2	23	
+2	Mo22_0607	Channel 7	Mo22_0607	3	24	
+1	Mo22_0659	DB_A1_0415_03	Mo22_0659	4	25	
+2	Mo22_0660	DB_A1_0415_06	Mo22_0660	5	26	
+1	Mo22_0650	Channel 8	Mo22_0650	6	27	
+2	Mo22_0603	Channel 3	Mo22_0603	7	28	
+1	BLANK5		BLANK5			
+2	Mo22_0666	Channel6 6	Mo22_0666	1	29	
+1	Mo22_0656	DB_A1_0414_18	Mo22_0656	2	30	
+2	Mo22_0664	Channel 4	Mo22_0664	3	31	
+1	Mo22_0695	NA	Mo22_0695	4	32	
+2	Mo22_0662	Channel 2	Mo22_0662	5	33	
+1	Mo22_0027	Channel 7	Mo22_0027	6	34	
+2	Mo22_0094	NA	Mo22_0094	7	35	
+1	Blank6		BLANK6			
+2	Mo22_0661	Channel 1	Mo22_0661			
+1	Mo22_0586	NA	Mo22_0586			
+2	Mo22_0654	Channel 12	Mo22_0654			
+	Mo22_0675	Channel 3	Mo22_0675			
+	Mo22_0656_rerun	DB_A1_0414_18 Rerun	Mo22_0656_rerun			running this one again just to see if has same proteinaceous fluorescence
