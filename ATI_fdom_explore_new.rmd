@@ -1,0 +1,443 @@
+---
+title: "ATI fDOM explore"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    smooth_scroll: true 
+    fig_width: 10
+    code_folding: hide  
+date: '2022-12-05'
+---
+# Overview
+
+This rmarkdown is a first pass looking at data from all of the ATI 2022 fDOM (as processed by Sean's Rscript translation of the original matlab script).
+
+These samples were run by Skye Inn on a Horiba Aqualog and were split over several runs.
+
+A couple things to consider:
+
+- We suspect contaminant fluorescence in the region of PAHs/CobleT because of recent experiments with JP5 fuel.  
+
+- Some samples were re-run across runs.
+    - Check if these look the same across runs.
+    - Remove the rerun sample if nothing looks amiss
+    
+- Some milliq blanks were run as a form of extra QC.
+    - Check these for unusual fluoresecence.
+    - Remove from data set containing only real samples.
+
+
+  
+```{r env-setup}
+source("R/src/eem_plot_functions.R")
+source("R/src/process_aqualog_functions.R")
+library(GGally)
+library(rnaturalearth)
+
+# set ggplot params
+theme_set(theme_minimal())
+options(ggplot2.discrete.colour = c(
+  '#636EFA',
+  '#EF553B',
+  '#00CC96',
+  '#AB63FA',
+  '#FFA15A',
+  '#19D3F3',
+  '#FF6692',
+  '#B6E880',
+  '#FF97FF',
+  '#FECB52')
+  )
+
+# identify indices
+
+all_indices = c(
+  'CobleA',
+  'CobleB',
+  'CobleC',
+  'CobleM',
+  'CobleT',
+  'Fpeak',
+  'Stedmon_D',
+  'Optical_Brighteners',
+  'dieselBandII',
+  'Petroleum',
+  'Lignin',
+  'BIX',
+  'HIX',
+  'FI',
+  'M_to_C',
+  'JP5_empirical'
+)
+
+ord_indices =c(
+  'CobleA',
+  'CobleB',
+  'CobleT',
+  'Lignin'
+)
+
+```
+
+
+```{r read-in}
+all_runs = readRDS("data/compiled/all_runs.rds")
+
+sam_sheets = fread("data/compiled/all_sample_sheets.csv", drop = "run_name")
+index_data = fread("data/compiled/all_sample_indices.csv")
+meta = fread("data/sample_data/islandwide_sites_allMetadata.csv")
+
+
+
+proj = c(
+    cabral = "SGD",
+    varari = "SGD",
+    RRCoral_1 = "RRCoral",
+    RRCoral_2 = "RRCoral",
+    spiffy = "Spiffy",
+    spiffy_lang = "SpiffyLang",
+    diel_run1 = "diel",
+    diel_run2 = "diel",
+    aroundtheisland_run1 = "ati",
+    aroundtheisland_run2 = "ati",
+    aroundtheisland_run3 = "ati",
+    aroundtheisland_run4 = "ati",
+    aroundtheisland_run5 = "ati",
+    aroundtheisland_run6 = "ati",
+    aroundtheisland_run7 = "ati",
+    aroundtheisland_run8 = "ati"
+)
+
+# subset to ATI
+index_data[ , project := proj[run_name]]
+
+index_data = index_data[project == "ati"]
+
+
+# merge with relevant data
+all_dat = merge(index_data,
+                sam_sheets,
+                all.x = T,
+                all.y = F,
+                by = "UniqueID")
+
+
+all_dat[ , Site:= gsub("_.*","",UniqueID)]
+
+
+# pull out ancillary samples
+
+opu = all_dat[Site == "opu"]
+lter = all_dat[Site == "lter"]
+milliq = all_dat[Site=="milliq"]
+dupd = all_dat[duplicated(all_dat$Site)]
+
+
+dat = all_dat[!(Site %in% c("opu","lter","milliq"))] 
+
+# make long data for ggplot
+long_dat = melt.data.table(dat,
+                            id.vars = c("UniqueID", "Site"),
+                            measure.vars = all_indices,
+                            variable.name = "index_name",
+                            value.name = "index_value")
+
+
+
+
+
+```
+  
+
+
+## Check re-run samples
+
+Some samples were re-run to check for consistency (i.e. contaminant signal, run effects). I want to check that the re-run samples look similar to the original samples. 
+
+```{r check-samples}
+# pull out duplicates
+dupd_dat = dat[Site %in% dupd$Site]
+long_dupd_dat = long_dat[ Site %in% dupd$Site]
+
+# check counts
+dupd_dat[ , .("N samples" = .N,
+              "Runs" = paste(run_name, collapse = ",")), by = "Site"]
+
+# plot indices for each pair of duplicate samples
+
+p_check_list = list()
+
+for( i in dupd$Site){
+ 
+   p_check_list[[i]] = ggplot(long_dupd_dat[Site == i],
+                              aes(x = index_name,
+                                  y = index_value,
+                                  color = UniqueID))+
+                        geom_point(size = 4, alpha = 0.5)+
+                        theme(axis.text.x = element_text(angle = 90))
+
+  print(p_check_list[[i]])
+   
+   
+   ggsave(plot = p_check_list[[i]],
+          filename = paste0("plots/exploration/ATI/Site_",i,"_rerun_check.pdf"),
+          width = 10, height = 8)
+}
+
+
+
+
+```
+
+
+## Check Miliq blanks
+
+Skye ran the ATI samples. Whenever she saw a blank that she thought 'looked weird' she would run some milliq samples to see if the contamination stuck around. I didn't really encourage this, since it was sporadic contamination anyways, but I figured we should take a look at these data since we have them. 
+
+```{r}
+long_milliq = melt.data.table(milliq,
+                            id.vars = c("UniqueID", "Site"),
+                            measure.vars = all_indices,
+                            variable.name = "index_name",
+                            value.name = "index_value")
+
+milliq_samples = unique(long_milliq$UniqueID)
+
+ 
+   p_milliq = ggplot(long_milliq,
+                              aes(x = index_name,
+                                  y = index_value))+
+                        geom_point(size = 4, alpha = 0.5)+
+                        theme(axis.text.x = element_text(angle = 90))
+
+  
+   ggsave(plot = p_milliq,
+          filename = paste0("plots/exploration/ATI/Site_",i,"_milliq_check.pdf"),
+          width = 10, height = 8)
+p_milliq
+
+```
+
+## Remove extraneous reruns and blanks
+
+Now that we've checked for consistency between re-run samples and the opportunistically run milliq blanks, we can remove them from the data set and move onto analyses on the real data.
+
+
+```{r}
+
+clean_dat = merge(meta, 
+                  dat[!(UniqueID %in% dupd$UniqueID),],
+                  by = "Site",
+                  all.y = T)
+
+fwrite(clean_dat, "data/clean/ati_fdom_clean.csv")
+
+
+
+clean_long_dat = merge(meta, 
+                       long_dat[ !(UniqueID %in% dupd$UniqueID)],
+                       all.y = T)
+
+
+```
+
+
+
+# Site Data
+
+Check for trends by categorical variables:
+
+1. Habitat
+2. shore direction
+3. Lagoon name
+
+This is just a rough first pass with ugly boxplots.
+
+
+
+```{r}
+# check meta categories
+
+meta[ , .N, by = .(Habitat)][order(N)]
+
+meta[ , .N, by = .(Island_shore)][order(N)]
+
+meta[ , .N, by = .(Lagoon)][order(N)]
+
+
+
+
+
+```
+
+
+```{r}
+# habitat
+
+#pdf("plots/exploration/Habitat_index_plots.pdf", width = 10, height = 8)
+
+for(ind in unique(clean_long_dat$index_name)){
+  
+p = ggplot(clean_long_dat[index_name == ind], aes(x = index_name,
+                                         y = log(index_value),
+                                         color = Habitat))+
+  geom_boxplot()+
+    labs(title = paste0("log ",ind))
+
+print(p)
+  
+  
+}
+#dev.off()
+
+
+
+```
+
+
+```{r}
+# shore
+
+#pdf("plots/exploration/Island_shore_index_plots.pdf", width = 10, height = 8)
+
+for(ind in unique(clean_long_dat$index_name)){
+  
+p = ggplot(clean_long_dat[index_name == ind], aes(x = index_name,
+                                         y = log(index_value),
+                                         color = Island_shore))+
+  geom_boxplot()+
+    labs(title = paste0("log ",ind))
+
+print(p)
+  
+  
+}
+#dev.off()
+
+```
+
+  
+```{r}
+#pdf("plots/exploration/Lagoon_index_plots.pdf", width = 10, height = 8)
+
+
+
+
+for(ind in unique(clean_long_dat$index_name)){
+  
+p = ggplot(clean_long_dat[index_name == ind], aes(x = index_name,
+                                         y = log(index_value),
+                                         color = Lagoon))+
+  geom_boxplot()+
+    labs(title = paste0("log ",ind))
+
+print(p)
+  
+  
+}
+#dev.off()
+
+```
+## Maps  
+
+
+## version 1
+Working on a basi ggplot version of maps, but the projection seems to be off for some reason. Everything is in WGS84, so not sure what that's about.
+  
+```{r}
+library(rnaturalearth)
+library(raster)
+library(sf)
+library(sp)
+
+# remove sites with no lat/lon
+map_meta = meta[!is.na(Latitude)]
+
+map_long_dat = clean_long_dat[!is.na(Latitude)]
+
+# make spacial points data frame
+map_sp = SpatialPointsDataFrame(data = map_long_dat,
+                       coords = list(map_long_dat$Latitude,
+                                  map_long_dat$Longitude))
+
+
+# Check geographic range of sampling points
+limits = c(
+  min(map_meta$Longitude),
+  min(map_meta$Latitude), 
+  max(map_meta$Longitude),
+  max(map_meta$Latitude) 
+)
+
+# define a bounding box with a small cushion around the minimum and maximum
+bbox = list(
+  xmin = limits[1] - 0.03,
+  ymin = limits[2] - 0.04,
+  xmax = limits[3] + 0.03,
+  ymax = limits[4] + 0.04
+)
+
+# load shape file
+coasts = st_read("data/gis/ne_10m_coastline.shp")
+
+
+mo_coast = st_crop(coasts,
+        xmin = bbox$xmin,
+        xmax = bbox$xmax,
+        ymin = bbox$ymin,
+        ymax = bbox$ymax)
+
+crs(map_sp)
+
+
+# test
+ggplot()+
+    geom_point(data = as.data.frame(map_sp),
+       aes(x = Longitude, y = Latitude, color = index_value))+
+      geom_sf(data = mo_coast)
+
+
+```
+
+
+## version 2
+  This is another attempt at maps using the OpenStreet package. Seems to handle the point projection correctly, so I'm happy!
+  
+  All the indices are log transformed to better show spread at low values. There are a couple outlier samples with very high values for certain indices that wash out the colors otherwise. 
+  
+  Currently, these maps just show colored points. Eventually, we could try some interpolation or something. 
+  
+  
+```{r}
+library(OpenStreetMap)
+library(viridisLite)
+
+sa_map <- openmap(c(bbox$ymax, bbox$xmin),
+                  c(bbox$ymin, bbox$xmax),
+                  type = "stamen-terrain",
+                  mergeTiles = TRUE)
+
+sa_map2 <- openproj(sa_map)
+
+
+for(an_index in unique(map_long_dat$index_name)){
+
+sa_map2_plt <- OpenStreetMap::autoplot.OpenStreetMap(sa_map2)+
+  geom_point(data = map_long_dat[index_name == an_index],
+             aes(x = Longitude,
+                 y = Latitude,
+                 color = log(index_value)))+
+  labs(title = paste("Log",an_index))+
+  scale_color_viridis_c()
+
+print(sa_map2_plt)
+
+ggsave(filename = paste0("plots/exploration/ATI/map_",an_index,".pdf"), plot = sa_map2_plt)
+  
+}
+
+```
+  
+  
