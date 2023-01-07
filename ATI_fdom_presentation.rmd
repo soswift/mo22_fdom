@@ -1,0 +1,153 @@
+---
+title: "ATI fDOM presentation"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    smooth_scroll: true 
+    fig_width: 10
+    code_folding: hide  
+date: '2022-12-05'
+---
+
+# Overview
+Make three sets of plots for Around the island fDOM presentation
+
+
+Indices: HIX, A, T, B
+
+Details: Make colors pop (green to red) and drop outliers to get nice spread.
+
+
+
+1. Map
+
+2. Correlations to 'distance to shore'
+
+3. Correlations to silicate, N+N, Phosphorous
+
+```{r}
+library(ggplot2)
+library(data.table)
+
+
+theme_set(theme_minimal())
+
+l_dat = fread("data/clean/ati_fdom_long.csv")
+
+dat = fread("data/clean/ati_fdom_clean.csv")
+
+inds = c(
+  'CobleA',
+  'CobleB',
+  'CobleT',
+  'HIX'
+)
+
+# log transform all indices
+l_dat$log_index_value = log(l_dat$index_value)
+
+
+```
+
+
+
+# plots
+
+## Map
+
+```{r}
+library(sf)
+library(sp)
+library(OpenStreetMap)
+library(viridisLite)
+
+# remove sites with no lat/lon
+map_meta = meta[!is.na(Latitude)]
+
+map_long_dat = clean_long_dat[!is.na(Latitude)]
+
+# make spacial points data frame
+map_sp = SpatialPointsDataFrame(data = map_long_dat,
+                       coords = list(map_long_dat$Latitude,
+                                  map_long_dat$Longitude))
+
+
+# Check geographic range of sampling points
+limits = c(
+  min(map_meta$Longitude),
+  min(map_meta$Latitude), 
+  max(map_meta$Longitude),
+  max(map_meta$Latitude) 
+)
+
+# define a bounding box with a small cushion around the minimum and maximum
+bbox = list(
+  xmin = limits[1] - 0.03,
+  ymin = limits[2] - 0.04,
+  xmax = limits[3] + 0.03,
+  ymax = limits[4] + 0.04
+)
+
+# get basemap
+sa_map <- openmap(c(bbox$ymax, bbox$xmin),
+                  c(bbox$ymin, bbox$xmax),
+                  type = "stamen-terrain",
+                  mergeTiles = TRUE)
+
+sa_map2 <- openproj(sa_map)
+
+
+for(an_index in inds){
+
+sa_map2_plt <- OpenStreetMap::autoplot.OpenStreetMap(sa_map2)+
+  geom_point(data = map_long_dat[index_name == an_index],
+             aes(x = Longitude,
+                 y = Latitude,
+                 color = log(index_value)))+
+  labs(title = paste("Log",an_index))+
+  scale_color_viridis_c()
+
+print(sa_map2_plt)
+
+ggsave(filename = paste0("plots/exploration/ATI/map_",an_index,".pdf"), plot = sa_map2_plt)
+  
+}
+ 
+```
+
+
+## Distance to Shore
+
+```{r}
+
+cor_plot = function(ind, cor_var){
+  
+  #subset
+  ind_dat = l_dat[index_name == ind]
+  
+  # model
+  ind_lm = lm(as.formula(paste("log_index_value ~", cor_var)), data = sub_dat)
+  ind_sum = summary(ind_lm)
+  
+  ggplot(data = l_dat[index_name == ind], aes_string(x = cor_var,
+                                y = "index_value"))+
+    geom_point(aes(color = Habitat))+
+    
+    geom_abline(slope = ind_lm$coefficients[2],
+                intercept = ind_lm$coefficients[1])+
+    
+    labs(y = ind,
+         subtitle = paste("R sq. =",
+                          round(ind_sum$r.squared, 3)))
+
+}
+
+d_shore_ps = lapply(inds, cor_plot, cor_var = "Distance_to_shore")
+
+d_shore_ps
+
+```
+
+

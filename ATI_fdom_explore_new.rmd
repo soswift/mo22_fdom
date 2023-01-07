@@ -10,7 +10,7 @@ output:
     code_folding: hide  
 date: '2022-12-05'
 ---
-# Overview
+# Overviewi
 
 This rmarkdown is a first pass looking at data from all of the ATI 2022 fDOM (as processed by Sean's Rscript translation of the original matlab script).
 
@@ -52,6 +52,7 @@ options(ggplot2.discrete.colour = c(
   )
 
 # identify indices
+# select HIX, A, T, B for highlight
 
 all_indices = c(
   'CobleA',
@@ -75,9 +76,15 @@ all_indices = c(
 ord_indices =c(
   'CobleA',
   'CobleB',
+  'CobleT')
+
+select_indices = c(
+  'CobleA',
+  'CobleB',
   'CobleT',
-  'Lignin'
+  'HIX'
 )
+
 
 ```
 
@@ -88,6 +95,10 @@ all_runs = readRDS("data/compiled/all_runs.rds")
 sam_sheets = fread("data/compiled/all_sample_sheets.csv", drop = "run_name")
 index_data = fread("data/compiled/all_sample_indices.csv")
 meta = fread("data/sample_data/islandwide_sites_allMetadata.csv")
+nutrients = fread("data/sample_data/Lagoon_nutrients_April_2022.csv")
+turb = fread("data/sample_data/Turb_CHN_compiled_April2022.csv")
+
+setnames(turb, "Site_Number","Site")
 
 
 
@@ -232,14 +243,25 @@ clean_dat = merge(meta,
                   by = "Site",
                   all.y = T)
 
+clean_dat = merge(clean_dat, 
+                  nutrients,
+                  by = "Site",
+                  all.X = T)
+
+clean_dat = merge(clean_dat,
+                  turb,
+                  by = "Site",
+                  all.X = T)
+
 fwrite(clean_dat, "data/clean/ati_fdom_clean.csv")
 
 
+clean_long_dat = melt.data.table(clean_dat,
+                            measure.vars = all_indices,
+                            variable.name = "index_name",
+                            value.name = "index_value")
 
-clean_long_dat = merge(meta, 
-                       long_dat[ !(UniqueID %in% dupd$UniqueID)],
-                       all.y = T)
-
+fwrite(clean_long_dat, "data/clean/ati_fdom_long.csv")
 
 ```
 
@@ -255,6 +277,13 @@ Check for trends by categorical variables:
 
 This is just a rough first pass with ugly boxplots.
 
+Check for trends with Nutrients
+1. Phosphate
+2. Silicate
+3. N+N
+4. Ammonia
+
+## Categoricals
 
 
 ```{r}
@@ -267,6 +296,13 @@ meta[ , .N, by = .(Island_shore)][order(N)]
 meta[ , .N, by = .(Lagoon)][order(N)]
 
 
+# check nutrients
+nutrient_vars = c("Phosphate",
+                  "Silicate",
+                  "Nitrite_plus_Nitrate",
+                  "Ammonia")
+
+ggpairs(nutrients, 3:6)
 
 
 
@@ -322,9 +358,6 @@ print(p)
 ```{r}
 #pdf("plots/exploration/Lagoon_index_plots.pdf", width = 10, height = 8)
 
-
-
-
 for(ind in unique(clean_long_dat$index_name)){
   
 p = ggplot(clean_long_dat[index_name == ind], aes(x = index_name,
@@ -340,6 +373,16 @@ print(p)
 #dev.off()
 
 ```
+
+
+## Nutrients
+
+```{r}
+
+```
+
+
+
 ## Maps  
 
 
@@ -347,7 +390,6 @@ print(p)
 Working on a basi ggplot version of maps, but the projection seems to be off for some reason. Everything is in WGS84, so not sure what that's about.
   
 ```{r}
-library(rnaturalearth)
 library(raster)
 library(sf)
 library(sp)
