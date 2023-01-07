@@ -38,6 +38,9 @@ l_dat = fread("data/clean/ati_fdom_long.csv")
 
 dat = fread("data/clean/ati_fdom_clean.csv")
 
+meta = fread("data/sample_data/islandwide_sites_allMetadata.csv")
+
+
 inds = c(
   'CobleA',
   'CobleB',
@@ -48,6 +51,20 @@ inds = c(
 # log transform all indices
 l_dat$log_index_value = log(l_dat$index_value)
 
+# set factor levels for Habitat
+
+
+
+
+```
+
+
+Summary of samples collected
+
+```{r}
+site_meta = meta[!is.na(as.numeric(Site)) & May2021 == "Yes"]
+
+site_meta[!(Site %in% dat$Site) & May2021 == "Yes"]
 
 ```
 
@@ -63,10 +80,7 @@ library(sp)
 library(OpenStreetMap)
 library(viridisLite)
 
-# remove sites with no lat/lon
-map_meta = meta[!is.na(Latitude)]
-
-map_long_dat = clean_long_dat[!is.na(Latitude)]
+map_long_dat = l_dat[!is.na(Latitude)]
 
 # make spacial points data frame
 map_sp = SpatialPointsDataFrame(data = map_long_dat,
@@ -76,10 +90,10 @@ map_sp = SpatialPointsDataFrame(data = map_long_dat,
 
 # Check geographic range of sampling points
 limits = c(
-  min(map_meta$Longitude),
-  min(map_meta$Latitude), 
-  max(map_meta$Longitude),
-  max(map_meta$Latitude) 
+  min(map_long_dat$Longitude),
+  min(map_long_dat$Latitude), 
+  max(map_long_dat$Longitude),
+  max(map_long_dat$Latitude) 
 )
 
 # define a bounding box with a small cushion around the minimum and maximum
@@ -99,55 +113,160 @@ sa_map <- openmap(c(bbox$ymax, bbox$xmin),
 sa_map2 <- openproj(sa_map)
 
 
-for(an_index in inds){
+mo_map = function(an_index, outlier_n){
+  
+  # remove highest and lowest n samples
+  ind_map_dat = map_long_dat[index_name == an_index &
+                               !(is.infinite(log_index_value))][order(log_index_value)]
+  ind_map_dat = head(ind_map_dat, n = -(outlier_n))
+  ind_map_dat = tail(ind_map_dat, n = -(outlier_n))
 
-sa_map2_plt <- OpenStreetMap::autoplot.OpenStreetMap(sa_map2)+
-  geom_point(data = map_long_dat[index_name == an_index],
-             aes(x = Longitude,
-                 y = Latitude,
-                 color = log(index_value)))+
-  labs(title = paste("Log",an_index))+
-  scale_color_viridis_c()
+  sa_map2_plt = OpenStreetMap::autoplot.OpenStreetMap(sa_map2)+
+    geom_point(data = ind_map_dat,
+               aes(x = Longitude,
+                   y = Latitude,
+                   color = log_index_value))+
+    labs(title = paste("Log",an_index),
+         x = "Lon",
+         y = "Lat")+
+    scale_color_gradient(low = "green", high = "red")+
+    guides(fill=guide_legend(title=NULL))
 
 print(sa_map2_plt)
 
-ggsave(filename = paste0("plots/exploration/ATI/map_",an_index,".pdf"), plot = sa_map2_plt)
+ggsave(filename = paste0("plots/exploration/ATI/map_",an_index,".png"), plot = sa_map2_plt)
   
 }
  
+
+lapply(inds, mo_map, outlier_n = 10)
+
 ```
 
 
 ## Distance to Shore
 
 ```{r}
-
-cor_plot = function(ind, cor_var){
+# function for making correlation plots
+cor_plot = function(ind,
+                    cor_var,
+                    outlier_n,
+                    cor_var_outlier_n){
   
-  #subset
-  ind_dat = l_dat[index_name == ind]
+  #subset and drop outliers
+  ind_dat = l_dat[index_name == ind & !is.infinite(log_index_value)][order(index_value)]
+  ind_dat = head(ind_dat, n = -(outlier_n))
+  
+  if(!is.null(cor_var_outlier_n)){
+  ind_dat = head(ind_dat[order(ind_dat[[cor_var]])], n = -(cor_var_outlier_n))
+  
+  }
   
   # model
-  ind_lm = lm(as.formula(paste("log_index_value ~", cor_var)), data = sub_dat)
+  ind_lm = lm(as.formula(paste("log_index_value ~", cor_var)),
+              data = ind_dat)
   ind_sum = summary(ind_lm)
   
-  ggplot(data = l_dat[index_name == ind], aes_string(x = cor_var,
-                                y = "index_value"))+
+  p = ggplot(data = ind_dat, aes_string(x = cor_var,
+                                y = "log_index_value"))+
     geom_point(aes(color = Habitat))+
     
     geom_abline(slope = ind_lm$coefficients[2],
                 intercept = ind_lm$coefficients[1])+
     
-    labs(y = ind,
+    labs(y = paste( "Log",ind),
          subtitle = paste("R sq. =",
                           round(ind_sum$r.squared, 3)))
 
+  ggsave(paste0("plots/exploration/ATI/",cor_var,"_",ind,".png"))
+  
+  return(p)
+  
 }
+```
 
-d_shore_ps = lapply(inds, cor_plot, cor_var = "Distance_to_shore")
+
+```{r}
+# apply correlation plots for distance to shore
+d_shore_ps = lapply(inds,
+                    cor_plot,
+                    cor_var = "Distance_to_shore",
+                    outlier_n = 10,
+                    cor_var_outlier_n = NULL)
 
 d_shore_ps
 
 ```
 
+## Nutrients
+
+```{r}
+# apply correlation to nutrients
+
+# N+N
+NplusN_ps = lapply(inds,
+                    cor_plot,
+                    cor_var = "Nitrite_plus_Nitrate",
+                    outlier_n = 10,
+                    cor_var_outlier_n = 2)
+
+NplusN_ps
+```
+
+```{r}
+# Phosphate
+Phos_ps = lapply(inds,
+                    cor_plot,
+                    cor_var = "Phosphate",
+                    outlier_n = 10,
+                    cor_var_outlier_n = 2)
+
+Phos_ps
+```
+
+```{r}
+# Silicate
+Sil_ps = lapply(inds,
+                    cor_plot,
+                    cor_var = "Silicate",
+                    outlier_n = 10,
+                    cor_var_outlier_n = 4)
+
+Sil_ps
+```
+
+
+
+## Habitat Boxplots
+
+
+```{r}
+
+hab_box = function(ind){
+  
+p = ggplot(l_dat[index_name == ind], aes(x = index_name,
+                                         y = log_index_value,
+                                         color = factor(Habitat, levels = c("Reef pass",
+                                                                            "Reef crest",
+                                                                            "Mid lagoon",
+                                                                            "Bay",
+                                                                            "Fringing reef",
+                                                                            ""))))+
+      geom_boxplot()+
+      labs(title = paste0("log ",ind))+
+      facet_wrap(vars(Island_shore), nrow = 2)+
+      theme(legend.title=element_blank())
+
+
+print(p)
+  
+ggsave(paste0("plots/exploration/ATI/Habitat_boxplot_",ind,".png"))
+  
+}
+
+
+lapply(inds, hab_box)
+
+
+```
 
