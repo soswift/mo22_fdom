@@ -1,0 +1,375 @@
+---
+title: "ATI fDOM presentation"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    smooth_scroll: true 
+    fig_width: 10
+    code_folding: hide  
+date: '2022-12-05'
+---
+
+# Overview
+
+This document functions as a record of notes and code (i.e. scratch paper) for the Moorea Nutrient meeting in January 2023. Produced by Sean Swift following the various tasks thrown at him by Craig.
+
+## Breakout 1
+
+Groups 3 & 4:
+- Update water column cluster analysis
+- Silicate + Ocean Mixing proxy
+
+
+### Discussion Notes
+
+#### Nutrients affecting microbes & benthos
+
+Nutrients don't actually affect heterotrophic microbes directly.
+We would really really like benthic cover as a response...
+
+
+#### fDOM qc 
+
+Craig + Sean looked at matlab plots in jump side by side with R plots. Craig was concerned scrolling through plots from various Moorea projects. Looks like bright protein fluorescence and no DOM in samples e.g. Spiffy. Checked Spiffy sample 129 also for poor cropping of the Raman/Rayleigh scattering lines. 
+
+**Conclusion**
+
+- Same same, just R eem plots probably can't handle color scaling as well as JMP, which Craig is used to.
+- When there's a bright spot in the protein/JP5 region, we can't see the swathes of fdom in the background.
+- We can keep using R script outputs and trust them about the same as matlab
+- Raman/Rayleigh crop issue is in both R and matlab
+
+
+#### Organizing fDOM alongside other data
+
+Nyssa produced a nice merged data.frame that is canonical across working groups.
+Sean will join fDOM data onto this data.frame without dropping any rows.
+
+
+```{r}
+library(data.table)
+library(ggplot2)
+
+source("R/src/eem_plot_functions.R")
+source("R/src/process_aqualog_functions.R")
+
+```
+
+#### Cross year comparison of fDOM
+
+Craig: compare histograms of indices from 2021 and 2022
+
+
+In JMP
+
+
+Check two different fDOM parameters
+
+Log CobleA
+2021 = -1.4 to 2.4
+2022 = -1.4 to 2.3
+
+2022 contaminated = -.7 to -1.3
+
+Contaminated = Hihg and bimodal distribution (other higher normal dist floating at higher values)
+
+
+log CobleB
+2021 = -1 to -2.5, median -1.4
+2022 = -.6 to -2, median -1.45
+
+2022 contaminated = -1 to -0.2
+
+
+Note: these contaminated samples do not follow any 'natural' correlation with distance from shore, nutrient concentrations, etc. which also screams contamination
+
+Until we figure out, probably have to exclude.
+
+
+#### Check contam scans
+
+Interpretation: all the DOM patterns in contaminated samples do look broadly similar
+
+Also, we looked at Skye's notes for runs 6,7,8. We think all of these samples were shipped together in an ugly freezer box (see slack message Sean to Skye). Some of these were also urea capped scintillation vials.
+
+
+
+```{r, fig.width=5, fig.height=4}
+source("R/src/eem_plot_functions.R")
+source("R/src/process_aqualog_functions.R")
+
+# suspect samples based on Craig's clustering
+# high in parameters across the board
+
+exc = c(
+"12_run6_1",
+"121_run7_25",
+"142_run4_11",
+"147_run8_11",
+"151_run8_15",
+"152_run8_16",
+"19_run6_4",
+"205_run8_21",
+"206_run8_22",
+"27_run6_10",
+"35_run6_16",
+"44_run6_32",
+"45_run6_33",
+"58_run7_8",
+"62_run7_12",
+"63_run7_13",
+"72_run7_19",
+"99_run3_25",
+"99_run3_25"
+)
+
+# plot contaminated samples in a single file
+
+all_runs = readRDS("data/compiled/all_runs.rds")
+
+
+# ati runs
+ati_run_names = c(
+    aroundtheisland_run1 = "ati",
+    aroundtheisland_run2 = "ati",
+    aroundtheisland_run3 = "ati",
+    aroundtheisland_run4 = "ati",
+    aroundtheisland_run5 = "ati",
+    aroundtheisland_run6 = "ati",
+    aroundtheisland_run7 = "ati",
+    aroundtheisland_run8 = "ati"
+)
+
+ati_runs= all_runs[grepl("ati",names(all_runs))]
+
+
+ati_eems_ll = sapply(1:length(ati_runs), function(i) ati_runs[[i]]$EEMs)
+ati_eems = unlist(ati_eems_ll, recursive = F)
+
+names(ati_eems) = gsub("_Group.+","", names(ati_eems))
+
+# pull out contaminated eems
+contam_eems = ati_eems[names(ati_eems) %in% exc]
+
+
+contam_eem_ps = lapply(1:length(contam_eems), function(i) {
+  an_eem = contam_eems[[i]]
+  
+  p = plot_eem(an_eem,
+               sample_name = names(contam_eems)[i],
+               rows_as_names = T)
+    
+  
+  print(p)
+  return(p)
+  
+})
+  
+
+```
+
+
+
+
+
+#### Organize 2022 and 2021 fDOM data
+
+'Join' (but actually do manually because of weirdness) the 2021 data sheet (pre-worked on by Tom), the 2022 data sheet (based on cap labels) and Nyssa's data sheet DataTurbWater.csv from google drive.
+
+link: https://docs.google.com/spreadsheets/d/1ki_tV5Mm9EfV3jC-kTde5SC8gH11Zqc_KNZYioh5Nu0/edit?usp=sharing
+
+
+1. Read in the data files
+
+```{r}
+# get clean data table from Nyssa
+DataTurbWater = fread("data/clean/DataTurbWater.csv")
+
+DTW_22 = DataTurbWater[Year == 2022]
+DTW_21 = DataTurbWater[Year == 2021]
+
+
+
+# get data from both years
+mo22_fdom =  fread("data/clean/ati_fdom_clean.csv")
+
+mo21_fdom = fread("data/clean/May2021_fdom_nutrients_turbinaria_compiled.csv")
+```
+
+2. Do some checking and merging
+
+
+```{r}
+# merge check function
+
+check_site_names = function(fdom_sheet, clean_sheet, year){
+  
+  print(paste("Merge check for", year))
+  print(paste("number of fdom samples = ", nrow(fdom_sheet)))
+  print(paste("number of clean sheet samples = ", nrow(clean_sheet)))
+  
+# fdom sites in clean sheet
+if(all(fdom_sheet$Site %in% clean_sheet$Site)){
+ print(paste("all", year,"fdom sites are in the clean sheet :)")) 
+}else{
+  writeLines(c(paste(year, "fdom sites missing from clean sheet :("),
+  fdom_sheet$Site[!(fdom_sheet$Site %in% clean_sheet$Site)]))
+}
+
+# clean sheet sites in fdom
+if(all(clean_sheet$Site %in% fdom_sheet$Site)){
+ print(paste("all clean sheet sites are in the", year," fdom sites :)"))
+}else{
+  writeLines(c(paste("clean sheet sites missing from", year,"fdom :("),
+               clean_sheet$Site[!(clean_sheet$Site %in% fdom_sheet$Site)]))
+}
+}
+
+```
+
+
+```{r}
+# Merging
+# 2022 should merge well (names are pretty clean)
+check_site_names(fdom_sheet = mo22_fdom, clean_sheet = DTW_22, year = "2022")
+
+  
+# 2021 may not merge well
+check_site_names(fdom_sheet = mo21_fdom, clean_sheet = DTW_21, year = "2021")
+
+```
+
+
+
+
+
+```{r}
+# fix the tables
+## fix 22
+fix_22_key = c(
+  lter_3_bac = "LTER_3_Backreef",
+  lter_3_fringe = "LTER_3_Fringe",
+  lter_6_fringe = "LTER_6_Fringe",
+  opu_1 = "OPU 1",
+  opu_2 = "OPU 2"
+)
+
+fixed_mo22_fdom = copy(mo22_fdom)
+
+fixed_mo22_fdom$Site[match(names(fix_22_key), fixed_mo22_fdom$Site)] = unname(fix_22_key)
+
+
+
+check_site_names(fdom_sheet = fixed_mo22_fdom, clean_sheet = DTW_22, year = "2022")
+
+
+# fix 21
+fix_21_key = c(
+  "Cook's 1" = "Cook 1",
+  "LTER 3 Back Reef" =  "LTER_3_Backreef",
+  "LTER 3 Fringe Reef" = "LTER_3_Fringe",
+  "LTER 6 Fringe" = "LTER_6_Fringe"
+)
+
+fixed_mo21_fdom = copy(mo21_fdom)
+
+fixed_mo21_fdom$Site[match(names(fix_21_key), fixed_mo21_fdom$Site)] = unname(fix_21_key)
+
+# drop extra samples
+extra_21fdom = c(
+  1061,
+  1062,
+  1063
+)
+
+fixed_mo21_fdom = fixed_mo21_fdom[!(Site %in% extra_21fdom)]
+
+# check again
+check_site_names(fdom_sheet = fixed_mo21_fdom, clean_sheet = DTW_21, year = "2022")
+
+
+
+
+```
+
+Great! Site names are nice and clean.
+
+Next up, let's pick our favorite fdom parameters. We're going to go with the naming conventions from the mo22 dataset (i.e. the index codes like Coble B instead of descriptors like 'marine humic like').
+
+
+```{r}
+
+# match index names between years 2021 and 2022
+name_key = c(
+Site_number="Site",
+M.C="M_to_C",
+BIX="BIX",
+HIX="HIX",
+FI="FI",
+Ultra.Violet.Humic.like="CobleA",
+Marine.Humic.like="CobleM",
+Visible.Humic.like="CobleC",
+Tryptophan.like="CobleT",
+Tyrosine.like="CobleB",
+Phenylalanine.like="Fpeak",
+Lignin.like = "Lignin"
+)
+
+
+
+for(i in 1:length(name_key)){
+ 
+  setnames(fixed_mo21_fdom,
+           old = names(name_key)[i],
+           new = unname(name_key)[i],
+           skip_absent = T)
+   
+}
+
+
+# These are the indices we want for the model
+keep_names = c(
+  "Site",
+  "Year",
+  "CobleA",
+  "CobleB",
+  "CobleC",
+  "CobleM",
+  "CobleT",
+  "Lignin",
+  "M_to_C",
+  "HIX",
+  "BIX",
+  "FI"
+)
+
+
+
+# add a year column
+fixed_mo21_fdom[, Year := rep(2021, nrow(fixed_mo21_fdom))]
+fixed_mo22_fdom[, Year := rep(2022, nrow(fixed_mo22_fdom))]
+
+# keep only our selected columns
+fixed_mo21_fdom = fixed_mo21_fdom[, .SD, .SDcols = keep_names]
+fixed_mo22_fdom = fixed_mo22_fdom[, .SD, .SDcols = keep_names]
+
+
+# This is our final clean fdom sheet!
+fixed_all_fdom = rbind(fixed_mo21_fdom,fixed_mo22_fdom)
+
+
+# This is our final merged dataset
+fdom_merged_export = merge(DataTurbWater, fixed_all_fdom, by = c("Site","Year"))
+
+fwrite(fdom_merged_export, "data/clean/DatTurbWaterfDOM.csv")
+
+```
+
+
+
+
+
+
+
